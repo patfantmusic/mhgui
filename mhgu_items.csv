@@ -1,0 +1,798 @@
+name,rarity,capacity,value,how_to_get,category
+Potion,1,10,7,Combine Herb and Blue Mushroom,Healing & Buffs
+Mega Potion,2,10,16,Combine Potion and Honey,Healing & Buffs
+Nutrients,2,5,25,Combine Blue Mushroom and Godbug,Healing & Buffs
+Mega Nutrients,3,5,92,Combine Nutrients and Honey,Healing & Buffs
+Antidote,1,10,6,Combine Antidote Herb and Blue Mushroom,Healing & Buffs
+Immunizer,3,10,92,Combine Catalyst and Dragon Toadstool,Healing & Buffs
+Dash Juice,2,5,29,Combine Catalyst and Rare Steak,Healing & Buffs
+Mega Dash Juice,3,5,205,Combine Well-Done Steak and Dash Extract,Healing & Buffs
+Demondrug,4,5,67,Combine Catalyst and Might Seed,Healing & Buffs
+Mega Demondrug,5,5,283,Combine Demondrug and Pale Extract,Healing & Buffs
+Might Pill,1,5,280,Combine Immunizer and Might Seed,Healing & Buffs
+Armorskin,4,5,58,Combine Catalyst and Adamant Seed,Healing & Buffs
+Mega Armorskin,5,5,269,Combine Armorskin and Pale Extract,Healing & Buffs
+Adamant Pill,1,5,260,Combine Immunizer and Adamant Seed,Healing & Buffs
+Cool Drink,1,5,30,Combine Ice Crystal and Bitterbug,Healing & Buffs
+Hot Drink,1,5,25,Combine Hot Pepper and Bitterbug,Healing & Buffs
+Cleanser,2,10,14,Combine Catalyst and Popfish,Healing & Buffs
+Psychoserum,3,10,30,Trader,Healing & Buffs
+Herbal Medicine,2,10,25,Combine Gloamgrass Root and Bitterbug,Healing & Buffs
+Max Potion,3,2,210,Combine Mega Nutrients and Dragon Toadstool,Healing & Buffs
+Ancient Potion,5,1,345,Combine Immunizer and Kelbi Horn,Healing & Buffs
+Energy Drink,2,10,5,Combine Honey and Nitroshroom,Healing & Buffs
+Lifepowder,4,3,315,Combine Lifecrystals and Wyvern Claw,Healing & Buffs
+Dust of Life,5,2,1005,Trade 15 Horns Coins (HR 11 required),Healing & Buffs
+Hunter's Drink,5,3,350,Combine Hyper Extract and Catalyst,Healing & Buffs
+Deodorant,2,10,8,Combine Bomb Casing and Bitterbug,Healing & Buffs
+Book of Combos 1,4,1,100,Buy from the Item Shop,Tools
+Book of Combos 2,4,1,200,Buy from the Item Shop,Tools
+Book of Combos 3,4,1,500,Buy from the Item Shop,Tools
+Book of Combos 4,5,1,1000,Buy from the Item Shop,Tools
+Book of Combos 5,5,1,1500,Buy from the Item Shop,Tools
+Binoculars,1,1,5,Buy from the Item Shop,Tools
+Catalyst,2,5,48,Combine Honey and Bitterbug,Tools
+Gunpowder,2,20,45,Combine Fire Herb and Nitroshroom,Tools
+Lifecrystals,3,3,59,Combine Godbug and Wyvern Fang,Tools
+Tranquilizer,4,10,15,Combine Sleep Herb and Parashroom,Tools
+Yukumo Egg,1,5,1,Given by Bath Cattendant at Yukumo Footbath,Tools
+Tanzia Chips,2,5,10,Given by Tanzia Port Boss at Yukumo Footbath,Tools
+Powercharm,5,1,3600,Buy from the Item Shop,Tools
+Powertalon,5,1,6840,Combine Powercharm and Deviljho Talon,Tools
+Armorcharm,5,1,2400,Buy from the Item Shop,Tools
+Armortalon,5,1,5040,Combine Armorcharm and Deviljho Talon,Tools
+BBQ Spit,4,1,56,Buy from the Item Shop,Tools
+Raw Meat,1,10,5,"Carve Aptonoth, Gargwa, Kelbi, Popo,  Rhenoplos, or Slagtoth",Tools
+Poisoned Meat,1,10,19,Combine Raw Meat and Toadstool,Tools
+Tinged Meat,2,10,30,Combine Raw Meat and Parashroom,Tools
+Drugged Meat,1,10,32,Combine Raw Meat and Sleep Herb,Tools
+Rare Steak,1,10,3,Cook Raw Meat,Tools
+Well-done Steak,2,10,48,Cook Raw Meat,Tools
+Burnt Meat,1,10,1,Cook Raw Meat,Tools
+Chilled Meat,1,10,30,Combine Well-done Steak and Ice Crystal,Tools
+Hot Meat,1,10,25,Combine Well-done Steak and Hot Pepper,Tools
+Mosswine Jerky,2,5,10,Given by Master Tool at Yukumo Footbath,Tools
+Kingmeat,6,99,550,"Reward from Village Quest ""Advanced: Jurassic Treasure""",Tools
+Whetstone,1,20,8,Buy from the Item Shop or gather in most areas,Tools
+Old Pickaxe,1,5,6,Combine Stone and Mystery Bone,Tools
+Iron Pickaxe,1,5,16,Combine Iron Ore and Mystery Bone,Tools
+Mega Pickaxe,3,5,24,Combine Machalite Ore and Mystery Bone,Tools
+Old Bug Net,1,5,3,Combine Ivy and Mystery Bone,Tools
+Bug Net,1,5,8,Combine Ivy and Monster Bone S,Tools
+Mega Bug Net,3,5,12,Combine Ivy and Monster Bone M,Tools
+Boomerang,4,5,15,Combine Whetstone and Monster Bone S,Tools
+Bomb Casing,1,30,15,Combine Sap Plant and Stone or Sap Plant and Iron Ore,Tools
+Paintball,1,99,10,Combine Bomb Casing and Paintberry,Tools
+Flash Bomb,2,5,57,Combine Bomb Casing and Flashbug,Tools
+Sonic Bomb,2,10,45,Combine Gunpowder and Screamer,Tools
+Tranq Bomb,4,8,35,Combine Tranquilizer and Bomb Casing,Tools
+Smoke Bomb,2,10,80,Combine Bomb Casing and Ivy,Tools
+Poison Smoke Bomb,2,10,60,Combine Bomb Casing and Toadstool or Bomb Casing and Poison Sac,Tools
+Farcaster,3,1,30,Combine Bomb Casing and Exciteshroom,Tools
+Dung Bomb,2,10,80,Combine Bomb Casing and Dung,Tools
+Dung,1,10,1,"Search dung piles in Jurassic Frontier, Verdant Hills,  Misty Peaks, Dunes, Deserted  Island, Ancestral Steppe, Volcanic  Hollow, Desert, and Jungle",Tools
+Trap Tool,3,2,20,Buy from the Item Shop,Tools
+Spider Web,1,10,6,"Search spiderwebs in Jurassic Frontier, Verdant Hills,  Misty Peaks, Dunes, Deserted  Island, Marshlands, Ancestral Steppe, Volcanic  Hollow, Primal Forest, and Jungle",Tools
+Net,2,10,54,Combine Spider Web and Ivy,Tools
+Pitfall Trap,3,1,46,Combine Net and Trap Tool,Tools
+Shock Trap,3,1,160,Combine Trap Tool and Thunderbug,Tools
+Barrel Lid,5,99,10,"Gather at Lynian stockpiles in Verdant Hills, Marshlands, Desert, and Jurassic Frontier",Tools
+Small Barrel,1,10,8,Buy from the Item Shop,Tools
+Large Barrel,2,10,21,Buy from the Item Shop,Tools
+Barrel Bomb S,2,10,16,Combine Small Barrel and Fire Herb,Tools
+Barrel Bomb L,3,3,52,Combine Gunpowder and Large Barrel,Tools
+Barrel Bomb L+,4,2,80,Combine Barrel Bomb L and Scatterfish,Tools
+Bounce Bomb,2,10,18,Combine Barrel Bomb S and Bnahabra Wing,Tools
+Bounce Bomb+,4,10,68,Combine Bounce Bomb and Bomb Arowana,Tools
+Affinity Oil,4,5,14,Buy from the Item Shop,Tools
+Destroyer Oil,4,5,25,Buy from the Item Shop,Tools
+Exhaust Oil,4,5,14,Buy from the Item Shop,Tools
+Mind's Eye Oil,4,5,25,Buy from the Item Shop,Tools
+Worm,1,10,2,Gather in most areas,Tools
+Mega Fishing Fly,3,10,3,"Gather in Misty  Peaks, Dunes, Deserted  Island, Ancestral Steppe, Volcanic  Hollow, Primal Forest, Frozen Seaway,  and Ruined  Pinnacle",Tools
+Frog,2,10,15,Search near bodies of water,Tools
+Sushifish Bait,2,5,2,Combine Mega Fishing Fly and Insect Husk,Tools
+Burst Bait,2,5,7,Combine Mega Fishing Fly and Stinkhopper,Tools
+Goldenfish Bait,4,5,30,Combine Mega Fishing Fly and Snakebee Larva,Tools
+Field Horn,2,1,48,Buy from the Item Shop,Tools
+Health Horn,4,1,550,Combine Lifecrystals and Field Horn,Tools
+Antidote Horn,4,1,300,Combine Antidote and Field Horn,Tools
+Demon Horn,5,1,1080,Combine Mega Demondrug and Field Horn,Tools
+Armor Horn,5,1,986,Combine Mega Armorskin and Field Horn,Tools
+Slickaxe,4,99,0,Reward from certain gathering quests (Paw Pass Ticket),Tools
+Alchemy Food,3,10,0,Shake Alchemy Barrel one time,Alchemy
+Alchemy Whetstone,3,8,0,Shake Alchemy Barrel one time (Blademaster only),Alchemy
+Alchemy Bullet,3,30,0,Shake Alchemy Barrel one time (Gunner-Bowguns only),Alchemy
+Alchemy Coating,3,20,0,Shake Alchemy Barrel one time (Gunner-Bow only),Alchemy
+Alchemy Immunizer,3,10,0,Shake Alchemy Barrel two times,Alchemy
+Alchemy Sonic Boom,4,3,0,Shake Alchemy Barrel two times,Alchemy
+Alchemy Earplugs,3,3,0,Shake Alchemy Barrel three times,Alchemy
+Alchemy Booster,4,1,0,Shake Alchemy Barrel three times,Alchemy
+Alchemy Slick,4,1,0,Shake Alchemy Barrel four times,Alchemy
+Alchemy Fireball,5,3,0,Shake Alchemy Barrel four times,Alchemy
+Alchemy Cheer,5,1,0,Shake Alchemy Barrel five times,Alchemy
+Alchemy Remedy,5,1,0,Shake Alchemy Barrel five times,Alchemy
+Normal S Lv1 LV1,1,inf,0,Always have when equipped with a Bowgun,Ammo & Coatings
+Normal S Lv2 LV2,1,99,1,Combine Huskberry and Needleberry,Ammo & Coatings
+Normal S Lv3 LV3,2,99,2,Combine Huskberry and Popfish,Ammo & Coatings
+Pierce S Lv1 LV1,2,60,1,Combine Huskberry and Latchberry,Ammo & Coatings
+Pierce S Lv2 LV2,2,60,2,Combine Bone Husk and Bird Wyvern Fang,Ammo & Coatings
+Pierce S Lv3 LV3,3,60,3,Combine Bone Husk and Pin Tuna,Ammo & Coatings
+Pellet S Lv1 LV1,2,80,1,Combine Huskberry and Scatternut,Ammo & Coatings
+Pellet S Lv2 LV2,2,70,2,Combine Huskberry and Wyvern Fang,Ammo & Coatings
+Pellet S Lv3 LV3,3,60,2,Combine Bone Husk and Wyvern Fang,Ammo & Coatings
+Crag S Lv1 LV1,3,9,4,Combine Huskberry and Nitroshroom,Ammo & Coatings
+Crag S Lv2 LV2,3,9,7,Combine Huskberry and Burst Arowana,Ammo & Coatings
+Crag S Lv3 LV3,3,9,7,Combine Huskberry and Bomb Arowana,Ammo & Coatings
+Clust S Lv1 LV1,2,3,4,Combine Huskberry and Bomberry,Ammo & Coatings
+Clust S Lv2 LV2,3,5,6,Combine Bone Husk and Wyvern Claw,Ammo & Coatings
+Clust S Lv3 LV3,3,5,10,Combine Bone Husk and Scatterfish,Ammo & Coatings
+Flaming S LV1 LV1,3,60,2,Combine Huskberry and Fire Herb,Ammo & Coatings
+Flaming S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Flaming S LV1 LV1,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Flaming S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Water S LV1 LV1,3,60,2,Combine Huskberry and Whetfish,Ammo & Coatings
+Water S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Water S LV1 LV1,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Water S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Thunder S LV1 LV1,3,60,2,Combine Huskberry and Flashbug,Ammo & Coatings
+Thunder S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Thunder S LV1 LV1,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Thunder S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Freeze S LV1 LV1,3,60,2,Combine Huskberry and Ice Crystal,Ammo & Coatings
+Freeze S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Freeze S LV1 LV1,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+P.Freeze S LV2 LV2,3,60,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Dragon S LV1 LV1,5,20,10,Combine Bone Husk and Dragonfell Berry,Ammo & Coatings
+Dragon S LV2 LV2,5,20,10,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Poison S Lv1 LV1,2,12,2,Combine Huskberry and Toadstool,Ammo & Coatings
+Poison S Lv2 LV2,3,8,2,Combine Bone Husk and Ioprey Fang,Ammo & Coatings
+Poison Smoke S,3,8,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Para S Lv1 LV1,3,12,3,Combine Huskberry and Parashroom,Ammo & Coatings
+Para S Lv2 LV2,4,8,5,Combine Bone Husk and Genprey Fang,Ammo & Coatings
+Sleep S Lv1 LV1,3,12,2,Combine Huskberry and Sleep Herb,Ammo & Coatings
+Sleep S Lv2 LV2,4,8,3,Combine Bone Husk and Sleepyfish,Ammo & Coatings
+Remedy S,2,12,3,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Exhaust S Lv1 LV1,2,12,3,Combine Huskberry and Staminashroom,Ammo & Coatings
+Exhaust S Lv2 LV2,3,8,5,Combine Bone Husk and Wanchovy,Ammo & Coatings
+Rapid S RAPID,3,30,3,"Using the Hunter Art, Rapid Fire Rain",Ammo & Coatings
+Slicing S LV1 LV1,3,30,3,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Slicing S LV2 LV2,3,30,3,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Sharpnel S,3,30,3,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Wyvern S,4,10,6,Combine Bone Husk and Burst Arowana,Ammo & Coatings
+Cannon S Lv1 LV1,4,10,6,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Cannon S Lv2 LV2,4,10,6,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Blast S LV1,4,12,6,Combine Huskberry and Bomb Arowana,Ammo & Coatings
+Blast S LV2,4,12,6,Combine Huskberry and Bomb Arowana,Ammo & Coatings
+Triblast S,4,12,6,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Recover S Lv1 LV1,1,12,2,Combine Huskberry and Herb,Ammo & Coatings
+Recover S Lv2 LV2,2,12,2,Combine Potion and Huskberry,Ammo & Coatings
+Group Recover S,2,12,2,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Demon S,3,5,9,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Demon Aff S,3,5,9,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Armor S,3,5,7,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Super Armor S,3,5,7,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Paint S,1,99,6,Combine Huskberry and Paintberry,Ammo & Coatings
+Tranq S,3,8,4,Combine Tranquilizer and Bone Husk,Ammo & Coatings
+Stone S,3,8,4,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Flash S,3,12,3,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Dazzling S,3,12,3,Certain Light  Bowguns or Heavy Bowguns,Ammo & Coatings
+Empty Phial,1,99,1,Combine Bone Husk and Whetstone,Ammo & Coatings
+Power Coating LV1 LV1,2,50,3,Combine Empty Phial and Fire Herb,Ammo & Coatings
+Power Coating LV2 LV2,2,50,3,Combine Empty Phial and Nitroshroom,Ammo & Coatings
+Elem Coating LV1 LV1,2,50,3,Combine Empty Phial and Bitterbug,Ammo & Coatings
+Elem Coating LV2 LV2,2,50,3,Combine Empty Phial and Gloamgrass Root,Ammo & Coatings
+C.Range Coating,2,20,3,Combine Empty Phial and Whetfish,Ammo & Coatings
+Poison Coating,3,20,2,Combine Empty Phial and Toadstool,Ammo & Coatings
+Para Coating,3,20,3,Combine Empty Phial and Parashroom,Ammo & Coatings
+Sleep Coating,3,20,2,Combine Empty Phial and Sleep Herb,Ammo & Coatings
+Exhaust Coating,3,20,2,Combine Empty Phial and Staminashroom,Ammo & Coatings
+Blast Coating,3,20,6,Combine Empty Phial and Bomb Arowana,Ammo & Coatings
+Paint Coating,1,99,6,Combine Empty Phial and Paintberry,Ammo & Coatings
+Huskberry,1,99,1,Search plants in most areas,Plants
+Honey,2,10,45,Search beehives in most areas,Plants
+Herb,1,10,2,Search plants in most areas,Plants
+Antidote Herb,1,10,2,Search plants in most areas,Plants
+Fire Herb,2,20,4,"Search plants in Dunes, Volcano, Volcanic  Hollow, Desert, and Ingle Isle",Plants
+Ivy,1,10,8,Search plants in most areas,Plants
+Sleep Herb,1,10,5,Search plants in most areas,Plants
+Sap Plant,1,30,2,Search plants in most areas,Plants
+Felvine,1,10,1,Search plants in most areas,Plants
+Gloamgrass Root,2,10,10,"Search plants in Verdant Hills, Arctic Ridge, Dunes, Marshlands, Volcanic  Hollow, Desert, or Jungle",Plants
+Hot Pepper,2,10,4,"Search plants in Dunes, Marshlands, Volcano, Desert, Jungle, or Primal Forest",Plants
+Snow Herb,2,99,6,"Gather in Jurassic Frontier, Arctic Ridge, Misty Peaks, or Ruined  Pinnacle",Plants
+Spicy Mushroom,3,5,54,Combine Hot Pepper and Unique Mushroom,Plants
+Frozen Berry,3,10,54,Combine Ice Crystal and Tropical Berry,Plants
+King Cactus,5,99,500,"Reward from Village Quest ""Royal Pains""",Plants
+Dosbiscus,5,99,20,By-product of trade with Sunsnug Isle,Plants
+Heftcorn,5,99,500,"Reward from Village Quest ""Lagiacrus Fuss""",Plants
+Stargazer Flower,4,99,120,"Reward from Village Quests ""On the Rebound,"" ""Moofah Must-haves,"" or ""Advanced: The Goliaths""",Plants
+Prismatic Dandelion,4,99,150,"Reward from Hub Quests ""Hyper for Holes,"" ""Daimyo of the Deserted Island,""  or ""Bring On the Shogun"" and Armory  Granny's item delivery request",Plants
+Dragonvine,6,99,600,Search plants in Ruined Pinnacle,Plants
+Tough Dragonvine,8,99,800,Search plants in G-Rank Ruined Pinnacle,Plants
+Blue Mushroom,2,10,2,Search mushrooms in most areas,Plants
+Nitroshroom,2,20,6,Search mushrooms in most areas,Plants
+Parashroom,3,10,15,"Search mushrooms in Arctic Ridge, Marshlands, Volcanic Hollow, Primal Forest,  or Jungle",Plants
+Toadstool,2,10,8,"Search mushrooms in Misty Peaks, Marshlands, or Primal Forest",Plants
+Mopeshroom,2,10,9,"Search mushrooms in Jurassic Frontier, Misty Peaks, Dunes, Deserted  Island, Ancestral Steppe, or Primal Forest",Plants
+Exciteshroom,3,10,18,"Search mushrooms in Jurassic Frontier, Dunes, Deserted  Island, Marshlands, Ancestral Steppe, Volcanic  Hollow, Primal Forest, Jungle, or Ruined Pinnacle",Plants
+Dragon Toadstool,3,10,40,"Search mushrooms in Jurassic Frontier, Misty Peaks, Deserted  Island, Volcano, Desert, or Ruined  Pinnacle",Plants
+Chaos Mushroom,5,99,40,By-product of trade with Jumbo Shroom Mountain,Plants
+Bindshroom,5,99,40,By-product of trade with Jumbo Shroom Mountain,Plants
+Restshroom,4,99,250,"Reward from Village Quest ""Royal Honey Hunt""",Plants
+Paintberry,1,99,6,Search plants in most areas,Plants
+Might Seed,2,10,140,Search plants in most areas,Plants
+Adamant Seed,2,10,110,Search plants in most areas,Plants
+Nulberry,2,10,120,Search plants in most areas,Plants
+Dragonfell Berry,4,10,78,"Search plants in Volcano, Volcanic  Hollow, Ruined Pinnacle, or Ingle Isle Carve  Uroktor",Plants
+Scatternut,2,30,4,Search plants in most areas,Plants
+Needleberry,1,99,1,Search plants in most areas,Plants
+Latchberry,1,60,4,Search plants in most areas,Plants
+Bomberry,2,10,12,"Search plants in Dunes, Marshlands, Volcano, Primal Forest,  Frozen Seaway,  and Desert",Plants
+Bumblepumpkin,2,10,12,By-product of trade with Sunsnug Isle,Plants
+Giant Acorn,4,99,130,"Reward from Village Quest ""Cancer of the Dunes""",Plants
+Spiky Acorn,4,99,120,"Reward from Village Quest ""Hunt-a-thon: Velocidrome""",Plants
+Yukumo Wood,4,99,50,Carve fallen logs in Misty Peaks,Plants
+Yukumo Hardwood,6,99,350,Carve fallen logs in High-rank Misty Peaks,Plants
+Yukumo Stoutwood,8,99,650,Carve fallen logs in G-rank Misty Peaks,Plants
+Stone,1,99,1,Mining in most areas,Minerals & Ores
+Iron Ore,4,99,60,Mining in most Low-rank areas,Minerals & Ores
+Earth Crystal,4,99,80,Mining in most areas,Minerals & Ores
+Machalite Ore,4,99,160,Mining in most Low-rank areas,Minerals & Ores
+Disc Stone,4,99,68,"Mining in the Verdant Hills, Arctic Ridge, Marshlands, Volcano, or Jungle",Minerals & Ores
+Ice Crystal,4,20,60,"Mining in the Arctic  Ridge, Marshlands, Dunes, Frozen Seaway, or Desert Shiny drop from Zamtrios",Minerals & Ores
+Bealite Ore,4,99,140,"Mining in Deserted Island, Misty Peaks, and Ruined  Pinnacle",Minerals & Ores
+Lightcrystal,4,99,1150,"Hunting Low-rank Gypceros  and Kirin or mining in the  Low-rank Marshlands  and High-rank Arctic  Ridge, Marshlands and Frozen Seaway",Minerals & Ores
+Dragonite Ore,4,99,480,Mining in the Low-rank Volcano and most High-rank areas,Minerals & Ores
+Firestone,4,99,860,Mining in the Low-rank Volcano and Volcanic Hollow,Minerals & Ores
+Allfire Stone,8,99,5160,Mining in the G-Rank Volcano  and Volcanic  Hollow,Minerals & Ores
+Lava Nugget,4,99,530,"Hunting Uragaan, Crystalbeard Uragaan, or Lavasioth",Minerals & Ores
+Carbalite Ore,6,99,680,Mining in most High-rank areas,Minerals & Ores
+Eltalite Ore,8,99,1280,Mining in most G-rank areas,Minerals & Ores
+Meldspar Ore,8,99,1920,"Mining in G-Rank Deserted Island, Marshlands, Volcano, Frozen Seaway,  or Jungle",Minerals & Ores
+Novacrystal,6,99,2440,Hunting High-Rank Gypceros  and Kirin or mining in the  High-rank Marshlands  and Frozen  Seaway,Minerals & Ores
+Purecrystal,8,99,7320,"Hunting G-Rank Gypceros,  Kirin, Fatalis, Crimson Fatalis, or White Fatalis,  mining Ahtal-Neset, mining  in G-rank Marshlands  and Jungle, or the secret  gathering point in Dunes, Ancestral  Steppe, Primal Forest, Frozen Seaway,  and Ruined  Pinnacle",Minerals & Ores
+Fucium Ore,6,99,1020,Mining in most High-rank areas,Minerals & Ores
+Firecell Stone,6,99,1720,"Hunting Agnaktor, Akantor, Gravios, Uragaan, or Crystalbeard Uragaan or mining in  the High-rank Volcano and Volcanic  Hollow",Minerals & Ores
+Rainbow Ore,5,99,960,Reward from 5â Hub dual monster quests (Bherna Request),Minerals & Ores
+Immaculate Ore,8,99,80,Horns Coins Exchange,Minerals & Ores
+Pristine Ore,8,99,960,Horns Coins Exchange,Minerals & Ores
+Ultimas Crystal,8,99,7500,Mining in G-Rank Volcanic Hollow,Minerals & Ores
+Aquaglow Jewel,4,99,50,"Low-Rank Quest rewards, mining in most Low-rank areas",Minerals & Ores
+Sunspire Jewel,4,99,350,"Low-Rank Quest rewards, mining in most areas",Minerals & Ores
+Bloodrun Jewel,5,99,530,"High-Rank Quest rewards, mining in most High-rank areas",Minerals & Ores
+Lazurite Jewel,5,99,880,"High-Rank Quest rewards, mining in most High-rank areas",Minerals & Ores
+Adamant Orb,8,99,1000,"G-Rank Quest rewards, mining in most G-rank areas",Minerals & Ores
+Sovereign Orb,8,99,1500,"G-Rank Quest rewards, mining in G-Rank Marshlands, Volcano, Volcanic Hollow, Frozen Seaway,  and Jungle",Minerals & Ores
+Armor Stone,4,99,150,Quest rewards and Hunters for Hire,Minerals & Ores
+Armor Sphere,4,99,80,"Low-Rank Quest rewards, mining in most Low-rank areas",Minerals & Ores
+Armor Sphere+,4,99,300,"Low-Rank Quest rewards, mining in most areas",Minerals & Ores
+Adv Armor Sphere,5,99,300,"High-Rank Quest rewards, mining in most High-rank areas",Minerals & Ores
+Hard Armor Sphere,5,99,400,"High-Rank Quest rewards, mining in most G-Rank areas",Minerals & Ores
+Heavy Armor Sphere,6,99,600,"High-rank Quest rewards, mining in most G-Rank areas",Minerals & Ores
+King Armor Sphere,8,99,700,"G-rank Quest rewards, mining in G-rank Marshlands, Volcano, and Volcanic Hollow",Minerals & Ores
+True Armor Sphere,9,99,800,G-rank Quest rewards,Minerals & Ores
+Mystery Charm,4,10,0,Mining in most areas,Minerals & Ores
+Shining Charm,5,10,0,Mining in most High-rank areas,Minerals & Ores
+Timeworn Charm,6,10,0,"Mining in the High-rank Volcano, Volcanic Hollow, and Frozen Seaway  and most G-rank areas, gather in the High-rank Deserted  Island and Marshlands secret area",Minerals & Ores
+Enduring Charm,8,10,0,"Village â10 and G3/G4 Quest Rewards, mining in the G-rank Volcano, Volcanic  Hollow, and Frozen Seaway, gather in the G-rank Deserted  Island and Marshlands secret area",Minerals & Ores
+Rustshard,5,3,0,"Mining in the Volcano,  Low-rank Elder  Dragon and High-rank quest rewards",Minerals & Ores
+Ancient Shard,7,3,0,"Mining in High-rank areas, High and G-rank quest rewards",Minerals & Ores
+Rare Fish,1,10,2,Rife Roast,Fish
+Burnt Fish,1,10,1,Rife Roast,Fish
+Gourmet Fish,2,10,40,Rife Roast,Fish
+Whetfish,1,10,45,Fish in most areas,Fish
+Sushifish,1,10,45,Fish in most areas,Fish
+Sleepyfish,2,10,45,Fish in most areas,Fish
+Pin Tuna,1,30,50,Fish in most areas,Fish
+Speartuna,5,10,1000,"Fish in Verdant  Hills, Frozen Seaway, Jungle, and Ruined Pinnacle",Fish
+Popfish,2,30,15,Fish in most areas,Fish
+Scatterfish,4,10,150,"Fish in Dunes, Marshlands, Ancestral  Steppe, Primal Forest, and Ruined  Pinnacle",Fish
+Burst Arowana,4,10,45,"Fish in Verdant  Hills, Arctic  Ridge, Misty  Peaks, Marshlands Ancestral Steppe, Primal Forest,  Desert, and Jungle",Fish
+Bomb Arowana,4,10,135,"Fish in Arctic  Ridge, Deserted Island, Marshlands, Ancestral  Steppe, Primal Forest, and Ruined  Pinnacle",Fish
+Glutton Tuna,4,10,13,"Fish in Jurassic Frontier, Dunes, Marshlands, and Ancestral  Steppe",Fish
+Gastronome Tuna,5,5,23,"Fish in High-Rank Jurassic Frontier, Dunes, Marshlands, Primal Forest,  Frozen Seaway,  Desert, Jungle, and Ruined Pinnacle",Fish
+Ancient Fish,5,5,23,"Fish in High-Rank Verdant Hills, Misty Peaks, Deserted Island, Marshlands, Ancestral  Steppe, and Frozen Seaway",Fish
+Small Goldenfish,4,99,500,Fish in most areas,Fish
+Wanchovy,2,20,48,"Fish in Jurassic Frontier, Arctic Ridge, Ancestral  Steppe, and Frozen Seaway",Fish
+Blue Cutthroat,4,99,100,"Quest reward from Hub Quest ""Isle About that Bass""",Fish
+Humspun Conch,4,99,100,"Quest reward from Village Quest ""Island Menace""",Fish
+Armored Bream,5,99,60,By-product of trade with Tanzia Port,Fish
+Sharqskin,4,99,380,"Quest reward from Hub Quest ""Lagiacrushed""",Fish
+Springnight Carp,5,99,100,By-product of trade with Tanzia Port,Fish
+Tailed Frog,4,99,100,"Quest reward from Village Quest ""Jurassic Treasure: The Frog""",Fish
+Guardfish,8,99,2500,"Fish in G-Rank Jurassic Frontier, Arctic Ridge, Dunes, Primal Forest,  Desert, Jungle, and Ruined Pinnacle",Fish
+Insect Husk,1,10,1,Catch in most areas,Insects
+Godbug,4,10,210,Catch in most areas,Insects
+Bitterbug,1,10,2,Catch in most areas,Insects
+Flashbug,2,10,48,Catch in most areas,Insects
+Thunderbug,4,99,150,Catch in most areas,Insects
+Stinkhopper,1,99,6,"Catch in Dunes, Deserted  Island, Ancestral Steppe, Primal Forest,  Frozen Seaway,  Jungle, and Ruined  Pinnacle",Insects
+Snakebee Larva,1,99,30,Search beehives in most areas,Insects
+Carpenterbug,1,99,120,Catch in most areas,Insects
+Shiny Beetle,4,99,200,"Catch in Verdant  Hills, Arctic  Ridge, Dunes, Marshlands, Volcano, Primal Forest,  Frozen Seaway,  Desert, Jungle, and Ruined Pinnacle",Insects
+Hercudrome,4,99,540,Catch in Low-rank Volcano  and most High-rank areas,Insects
+Fulgurbug,4,99,350,Catch from Zinogre,Insects
+King Scarab,6,99,800,Catch in most High-rank areas,Insects
+Rare Scarab,6,99,1000,"Catch in High-rank Deserted Island, Marshlands, Volcano, Volcanic  Hollow, Frozen Seaway, and Jungle or most G-rank areas",Insects
+Blossom Cricket,4,99,180,"Reward from Village Quest ""Jurassic Treasure: The Bug""",Insects
+Great Hornfly,5,99,60,By-product of trade with Moga Bee Yard,Insects
+Butterfly Beetle,5,99,220,By-product of trade with Moga Bee Yard,Insects
+Great Ladybug,5,99,60,"Reward from Hub Quest ""The New Tenant"" (5â)",Insects
+Emperor Hopper,8,99,1200,Catch in most G-rank areas,Insects
+Flutterfly,8,99,1800,"Catch in G-rank Deserted Island, Marshlands, Volcano, and Jungle",Insects
+Stygian Worm,8,99,2000,Catch in G-rank Jungle,Insects
+Toxic Kumori,4,99,480,Send Meownster Hunters to Rare Spots in the Low-rank Tundra,Insects
+Large Toxic Kumori,6,99,960,Send Meownster Hunters to Rare Spots in the High-rank Tundra,Insects
+Lethal Kumori,8,99,1920,Send Meownster Hunters to Rare Spots in the G-rank Tundra,Insects
+Dracophage Bug,4,99,500,Send Meownster Hunters to the Wetlands,Insects
+Larval Extract,5,99,240,Gather nectar plants in most areas,Kinsect Nectar
+Paralarval Extract,6,99,320,Gather nectar plants in most High-rank areas,Kinsect Nectar
+Power Jelly,4,99,100,"Gather nectar plants in Jurassic Frontier, Arctic Ridge, Deserted  Island, and Primal Forest",Kinsect Nectar
+Heavy Jelly,4,99,100,"Gather nectar plants in Jurassic Frontier, Misty Peaks, Dunes, Volcano, Desert, and Jungle",Kinsect Nectar
+Speed Jelly,4,99,100,"Gather nectar plants in Jurassic Frontier, Verdant Hills,  Marshlands, and Ancestral  Steppe",Kinsect Nectar
+Fire Ambrosia,4,99,100,"Gather nectar plants in Dunes,  Volcanic  Hollow, Primal Forest, Desert, and Ruined Pinnacle",Kinsect Nectar
+Water Ambrosia,4,99,100,"Gather nectar plants in Misty Peaks, Deserted Island, Frozen Seaway,  Jungle, and Ruined  Pinnacle",Kinsect Nectar
+Thunder Ambrosia,4,99,100,"Gather nectar plants in Dunes,  Volcanic  Hollow, Primal Forest, Desert, and Ruined Pinnacle",Kinsect Nectar
+Ice Ambrosia,4,99,100,"Gather nectar plants in Arctic Ridge, Frozen Seaway, and Ruined  Pinnacle",Kinsect Nectar
+Dragon Ambrosia,4,99,100,"Gather nectar plants in Volcano, Volcanic Hollow, and Ruined  Pinnacle",Kinsect Nectar
+Power Jelly+,5,99,240,Combine Power Jelly and Larval Extract,Kinsect Nectar
+Heavy Jelly+,5,99,240,Combine Heavy Jelly and Larval Extract,Kinsect Nectar
+Speed Jelly+,5,99,240,Combine Speed Jelly and Larval Extract,Kinsect Nectar
+Power Jelly++,5,99,240,Combine Power Jelly and Paralarval Extract,Kinsect Nectar
+Heavy Jelly++,5,99,240,Combine Heavy Jelly and Paralarval Extract,Kinsect Nectar
+Speed Jelly++,5,99,240,Combine Speed Jelly and Paralarval Extract,Kinsect Nectar
+Fire Ambrosia+,5,99,240,Combine Fire Ambrosia and Larval Extract,Kinsect Nectar
+Water Ambrosia+,5,99,240,Combine Water Ambrosia and Larval Extract,Kinsect Nectar
+Thunder Ambrosia+,5,99,240,Combine Thunder Ambrosia and Larval Extract,Kinsect Nectar
+Ice Ambrosia+,5,99,240,Combine Ice Ambrosia and Larval Extract,Kinsect Nectar
+Dragon Ambrosia+,5,99,240,Combine Dragon Ambrosia and Larval Extract,Kinsect Nectar
+Douse Ambrosia,5,99,180,Combine Fire Ambrosia and Burnt Meat,Kinsect Nectar
+Drought Ambrosia,5,99,180,Combine Water Ambrosia and Burnt Meat,Kinsect Nectar
+Resistor Ambrosia,5,99,180,Combine Thunder Ambrosia and Burnt Meat,Kinsect Nectar
+Melt Ambrosia,5,99,180,Combine Ice Ambrosia and Burnt Meat,Kinsect Nectar
+De-wyrm Ambrosia,5,99,180,Combine Dragon Ambrosia and Burnt Meat,Kinsect Nectar
+Reverse Ambrosia,4,99,10,Trader,Kinsect Nectar
+Bone Husk,2,99,3,Search bone piles in many areas,Bones
+Monster Bone S,3,99,10,Carve from multiple small monsters or search bone piles in many areas,Bones
+Monster Bone M,4,99,210,Carve from multiple small monsters,Bones
+Monster Bone L,4,99,440,Quest Rewards for many Low-rank quests,Bones
+Mystery Bone,1,99,1,Search bone piles in many areas,Bones
+Unknown Skull,4,99,120,Search bone piles in many areas,Bones
+Huge Unknown Skull,8,99,780,Search bone piles in many G-Rank areas,Bones
+Monster Bone+,4,99,560,Quest Rewards for many Low-rank and High-rank quests,Bones
+Monster Keenbone,6,99,660,Quest Rewards for Many High-rank Quests,Bones
+Monster Hardbone,6,99,840,Quest Rewards for many High-rank quests,Bones
+Monster Toughbone,8,99,1090,Quest Rewards for many G-rank quests,Bones
+Monster Slogbone,8,99,1320,Quest Rewards for many G-rank quests,Bones
+Elder Dragon Bone,6,99,880,Quest Rewards from Elder Dragons,Bones
+Lrg ElderDragon Bone,8,99,1500,Quest Rewards from G-rank Elder Dragons,Bones
+Avian Finebone,6,99,210,Carve High-rank small Bird Wyverns,Bones
+Avian Stoutbone,8,99,800,Carve G-rank small Bird Wyverns,Bones
+Large Herbivore Bone,8,99,630,Carve G-rank Herbivores,Bones
+Brute Bone,4,99,20,"Carve Low-rank Popo, Blango, or Bullfango",Bones
+Jumbo Bone,4,99,150,"Carve Low-rank Fanged Beasts (except Gammoth), Popo, Tetsucabra, Ceanataur, or Shogun Ceanataur",Bones
+Stoutbone,6,99,600,"Carve High-rank Fanged Beasts (except Gammoth), Popo, Tetsucabra, Ceanataur, or Shogun Ceanataur",Bones
+Massive Bone,8,99,1200,Carve G-rank Fanged Beasts (except Gammoth) or Tetsucabra,Bones
+Dragonbone Relic,6,99,600,Search bone piles in High-rank,Bones
+Dragonbone Artifact,8,99,1500,Search bone piles in G-rank,Bones
+Irregular Bone,6,99,660,Quest reward from Deviant quests,Bones
+Irregular Stoutbone,7,99,880,Quest reward from Lv5 or higher Deviant quests,Bones
+Irregular Slogbone,9,99,1140,Quest reward from LvG3 or higher G-rank Deviant quests,Bones
+Wyvern Fang,3,50,6,Quest reward from many quests,Bones
+Wyvern Claw,3,50,18,Quest reward from many quests,Bones
+Screamer Sac,4,99,15,"Carve Velocidrome,  Yian Kut-Ku, and Giadrome",Sacs & Fluids
+Poison Sac,4,99,96,Carve Low-rank Iodrome and  Gypceros,Sacs & Fluids
+Toxin Sac,6,99,288,"Carve High-rank Iodrome, Gypceros, and Basarios",Sacs & Fluids
+Deadly Poison Sac,8,99,864,"Carve G-rank Iodrome, Gypceros, and Basarios",Sacs & Fluids
+Paralysis Sac,4,99,120,"Carve Low-rank Gendrome,  Volvidon, and Najarala",Sacs & Fluids
+Omniplegia Sac,6,99,360,"Carve High-rank Gendrome,  Volvidon, and Najarala",Sacs & Fluids
+Ultraplegia Sac,8,99,1080,"Carve G-rank Gendrome, Volvidon, and Najarala",Sacs & Fluids
+Sleep Sac,4,99,230,Carve Low-rank Malfestio,Sacs & Fluids
+Coma Sac,6,99,690,"Carve High-rank Malfestio, Gravios, or Nerscylla",Sacs & Fluids
+Torpor Sac,8,99,2070,"Carve G-rank Malfestio,  Gravios, or Nerscylla",Sacs & Fluids
+Flame Sac,4,99,240,Reward from Low-rank Yian Garuga or carve Low-rank Yian Kut-Ku and any  of the Rath species,Sacs & Fluids
+Inferno Sac,6,99,720,"Reward from High-rank Yian Garuga or carve High-rank Yian Kut-Ku, Gravios, and any of the  Rath species",Sacs & Fluids
+Conflagrant Sac,8,99,1920,"Reward from G-rank Yian  Garuga or carve G-Rank Yian Kut-Ku or Gravios, and any of the Rath species",Sacs & Fluids
+Electro Sac,4,99,480,Carve or Capture Low-rank Khezu,Sacs & Fluids
+Thunder Sac,6,99,960,Carve or Capture High-rank Khezu,Sacs & Fluids
+Lightning Sac,8,99,2400,Carve or Capture G-rank Khezu,Sacs & Fluids
+Freezer Sac,6,99,870,Carve or Capture High-rank Zamtrios and Barioth,Sacs & Fluids
+Cryo Sac,8,99,1200,Carve or Capture G-rank Zamtrios and Barioth,Sacs & Fluids
+Aqua Sac,4,99,170,Carve or Capture Low-rank Royal Ludroth,Sacs & Fluids
+Torrent Sac,6,99,510,"Carve or Capture High-rank Royal Ludroth, Seltas, Seltas Queen, and Kecha Wacha",Sacs & Fluids
+Flood Sac,8,99,1020,"Carve or Capture G-rank Royal Ludroth, Seltas, Seltas Queen, and Kecha Wacha",Sacs & Fluids
+Dash Extract,4,20,56,Carve or Capture Gypceros  and Royal  Ludroth,Sacs & Fluids
+Pale Extract,4,20,122,Carve or Capture Khezu,Sacs & Fluids
+Monster Fluid,4,99,500,Carve Low-rank Neopterons,Sacs & Fluids
+Monster Broth,6,99,1000,Carve High-rank Neopterons and Temnocerans,Sacs & Fluids
+Monster Essence,8,99,2000,Carve G-rank Neopterons and Temnocerans,Sacs & Fluids
+Elder Dragon Blood,4,99,1500,Reward from Low-rank Elder Dragons,Sacs & Fluids
+Pure Dragon Blood,6,99,4500,Reward from High-rank Elder Dragons,Sacs & Fluids
+Viscous Dragon Blood,8,99,13500,Reward from G-rank Elder Dragons,Sacs & Fluids
+Hyper Extract,6,10,1000,High-rank Hyper Monster quests,Hyper
+Potent Hyper Extract,8,99,3000,G-rank Hyper Monster quests,Hyper
+Hyper Fang,6,99,1200,"High-rank Hyper Blangonga, Lavasioth, Najarala, Nargacuga, Tetsucabra, or Zamtrios quests",Hyper
+Hyper Fang+,6,99,2400,"High-rank Hyper Deviljho,  Gammoth, Glavenus, orTigrex quests",Hyper
+Hyper Heavyfang,8,99,3600,G-rank Hyper Tetsucabra quest,Hyper
+Hyper Keenfang,8,99,4800,"G-rank Hyper Blangonga,  Congalala, Lavasioth, Najarala, Nargacuga, or Zamtrios quests",Hyper
+Hyper Solidfang,8,99,7200,"G-rank Hyper Barioth, Deviljho, Diablos, Gammoth, Glavenus, or Tigrex quests",Hyper
+Hyper Claw,6,99,1200,"High-rank Hyper Daimyo Hermitaur, Kecha Wacha, Malfestio, Nibelsnarf, Rathian, Royal Ludroth,  Shogun  Ceanataur, or Tetsucabra quests",Hyper
+Hyper Claw+,6,99,2400,"High-rank Hyper Agnaktor,  Gore Magala, Lagiacrus, Mizutsune, Seltas Queen, Seregios, Rathalos, or Tigrex quests",Hyper
+Hyper Heavyclaw,8,99,3600,"G-rank Hyper Daimyo Hermitaur, Kecha Wacha, Royal Ludroth,  or Tetsucabra quests",Hyper
+Hyper Keenclaw,8,99,4800,"G-rank Hyper Barroth, Congalala, Malfestio, Nerscylla, Nibelsnarf, Rathian, or Shogun  Ceanataur quests",Hyper
+Hyper Solidclaw,8,99,7200,"G-rank Hyper Agnaktor, Gore Magala, Lagiacrus, Mizutsune, Seltas Queen, Seregios, Rathalos, or Tigrex quests",Hyper
+Hyper Monster Bone,6,99,1200,"High-rank Hyper Brachydios, Daimyo Hermitaur, Duramboros, Gypceros, Khezu, Nargacuga, Shogun  Ceanataur, Yian  Garuga, or Yian  Kut-Ku quests",Hyper
+Hyper MnstrToughbone,8,99,3600,"G-rank Hyper Barroth, Daimyo  Hermitaur, Gypceros, Khezu, Nargacuga, Shogun Ceanataur, or Yian Kut-Ku quests",Hyper
+Hyper MnstrSlogbone,8,99,7200,"G-rank Hyper Brachydios, Duramboros, Glavenus, or Seregios quests",Hyper
+Hyper Horn+,6,99,2400,"High-rank Hyper Astalos, Duramboros, Gore Magala, Lagiacrus, Rajang, Seregios, or Zinogre quests",Hyper
+Hyper Hardhorn,8,99,7200,"G-rank Hyper Astalos, Diablos, Duramboros, Rajang, Seregios, or Zinogre quests. Also  obtainable from subquest of ""Setting the Barioth High""",Hyper
+Hyper Flame Sac,6,99,1500,"High-rank Hyper Rathalos,  Silver  Rathalos, Rathian,  Gold Rathian, Yian Garuga, or Yian Kut-Ku quests",Hyper
+Hyper Conflagrant Sac,8,99,4500,"G-rank Hyper Basarios, Gravios, Rathalos, Silver  Rathalos, Rathian,  Gold Rathian, Yian Garuga, or Yian Kut-Ku quests",Hyper
+Hyper Pyroscale,6,99,1500,"High-rank Hyper Agnaktor,  Glavenus, Lavasioth, Uragaan, or Yian Kut-Ku quests",Hyper
+Hyper Flarescale,8,99,4500,"G-rank Hyper Agnaktor, Glavenus, Lavasioth, Uragaan, or Yian Garuga quests",Hyper
+Hyper Aqua Sac,6,99,1500,"High-rank Hyper Kecha  Wacha, Royal  Ludroth, or Seltas Queen quests",Hyper
+Hyper Flood Sac,8,99,4500,"G-rank Hyper Kecha  Wacha, Royal  Ludroth, or Seltas Queen quests",Hyper
+Hyper Fluid,6,99,1500,"High-rank Hyper Nibelsnarf, Mizutsune, Plesioth, orRoyal Ludroth quests",Hyper
+Hyper Viscous Fluid,8,99,4500,"G-rank Hyper Nibelsnarf, Mizutsune, Plesioth, orRoyal Ludroth quests",Hyper
+Hyper Thunder Sac,6,99,1500,High-rank Hyper Khezu quests,Hyper
+Hyper Lightning Sac,8,99,4500,G-rank Hyper Khezu quests,Hyper
+Hyper Charged Shell,6,99,1500,High-rank Hyper Astalos or  Lagiacrus quests,Hyper
+Hyper Amped Shell,8,99,4500,"G-rank Hyper Astalos or Lagiacrus quests. Also  obtainable from subquest of ""Setting the Barioth High""",Hyper
+Hyper Shockfur,6,99,1500,High-rank Hyper Rajang or Zinogre quests,Hyper
+Hyper Fluxfur,8,99,4500,G-rank Hyper Rajang or Zinogre quests,Hyper
+Hyper Ice Block,6,99,1500,"High-rank Hyper Blangonga, Gammoth, or Zamtrios quests",Hyper
+Hyper Ice Chunk,8,99,4500,"G-rank Hyper Barioth, Blangonga, Gammoth, or Zamtrios quests",Hyper
+Hyper Draco. Scale,6,99,2000,"High-rank Hyper Deviljho,  Gold Rathian, Gore Magala, or Silver  Rathalos quests",Hyper
+Hyper Draco. Scale+,8,99,6000,"G-rank Hyper Deviljho, Gold Rathian, Gore Magala, or Silver  Rathalos quests",Hyper
+Hyper Toxin,6,99,1500,"High-rank Hyper Gypceros,  Rathalos, Rathian, Gold Rathian, or  Yian Garuga quests",Hyper
+Hyper Potent Toxin,8,99,4500,"G-rank Hyper Basarios, Gypceros, Nerscylla, Rathalos, Rathian, Gold Rathian, or  Yian Garuga quests",Hyper
+Hyper Paratoxin,6,99,1500,High-rank Hyper Najarala  quests,Hyper
+Hyper Potent Paratoxin,8,99,4500,G-rank Hyper Najarala  quests,Hyper
+Hyper Sleep Sac,6,99,1500,High-rank Hyper Malfestio quests,Hyper
+Hyper Torpor Sac,8,99,4500,"G-rank Hyper Malfestio,  Gravios, or Nerscylla quests",Hyper
+Hyper Narcotoxin,6,99,1500,High-rank Hyper Plesioth  or Uragaan quests,Hyper
+Hyper Potent Narcotoxin,8,99,4500,G-rank Hyper Plesioth or  Uragaan quests,Hyper
+Hyper Catalyst,6,99,2000,High-rank Hyper Brachydios quests,Hyper
+Hyper Catalyst+,8,99,6000,G-rank Hyper Brachydios quests,Hyper
+Khezu Coin,4,99,300,"Reward from Arena Quest ""Grudge Match: Khezu""",Coins & Tickets
+Najarala Coin,4,99,400,"Reward from Arena Quest ""Grudge Match: Najarala""",Coins & Tickets
+Rathalos Coin,4,99,500,"Reward from Arena Quest ""Grudge Match: Rathalos""",Coins & Tickets
+Kecha Coin,6,99,800,"Reward from Arena Quest ""Grudge Match: Kecha Wacha""",Coins & Tickets
+Plesioth Coin,6,99,900,"Reward from Arena Quest ""Grudge Match: Plesioth""",Coins & Tickets
+Brachydios Coin,6,99,1000,"Reward from Arena Quest ""Grudge Match: Brachydios""",Coins & Tickets
+Gypceros Coin,4,99,300,"Reward from Arena Quest ""Grudge Match: Gypceros""",Coins & Tickets
+Drome Coin,6,99,900,"Reward from Arena Quest ""Grudge Match: Bird Wyverns""",Coins & Tickets
+Garuga Coin,8,99,1500,"Reward from Arena Quest ""Grudge Match: Yian Garuga""",Coins & Tickets
+Uragaan Coin,8,99,1700,"Reward from Arena Quest ""Grudge Match: Uragaan""",Coins & Tickets
+Seregios Coin,8,99,1900,"Reward from Arena Quest ""Grudge Match: Seregios""",Coins & Tickets
+Tetsucabra Coin,8,99,600,"Reward from Arena Quest ""Grudge Match: Tetsucabra""",Coins & Tickets
+Congalala Coin,8,99,300,"Reward from Arena Quest ""Grudge Match: Congalala""",Coins & Tickets
+Horns Coin,8,99,0,Reward from G-rank quests,Coins & Tickets
+Voucher,4,99,500,Reward from eating at the Canteen,Coins & Tickets
+Gourmet Voucher,5,99,1000,Reward from eating at the Canteen,Coins & Tickets
+Commendation,4,99,0,Reward from some Low-rank and High-rank Elder Dragon and multi-monster  quests,Coins & Tickets
+Commendation G,5,99,0,Reward from some High-rank and G-rank Elder Dragon and multi-monster  quests,Coins & Tickets
+Commendation XX,8,99,0,Reward from some G-rank Elder Dragon and multi-monster quests,Coins & Tickets
+Accolade,4,99,0,Reward from some Low-rank and High-rank multi-monster quests,Coins & Tickets
+Accolade G,5,99,0,Reward from some High-rank and G-rank multi-monster and Elder Dragon  quests,Coins & Tickets
+Accolade XX,8,99,0,Reward from some G-rank Elder Dragon and multi-monster quests,Coins & Tickets
+Distinction,9,99,0,Reward from G4 single-monster (non-Elder Dragon) quests,Coins & Tickets
+Privilege,8,99,0,Horns Coins Exchange (HR 11 required),Coins & Tickets
+Privilege G,9,99,0,Horns Coins Exchange (HR break required),Coins & Tickets
+Triumph,9,99,0,"G-rank Nakarkos, Akantor, Ukanlos, Amatsu, Alatreon, Fatalis, Crimson  Fatalis, and White Fatalis quests",Coins & Tickets
+Pawprint Stamp,5,99,0,Shiny drop from Felyne and Melynx,Coins & Tickets
+Pawprint Ticket,8,99,0,Shiny drop from G-rank Felyne  and Melynx,Coins & Tickets
+Bherna Ticket,5,99,0,Reward from Bherna Elder for completing Bherna Village requests,Coins & Tickets
+Bherna Ticket G,8,99,0,Reward from Bherna Elder for completing G-rank Bherna Village requests,Coins & Tickets
+Kokoto Ticket,5,99,0,Reward from Kokoto Elder for completing Kokoto Village requests,Coins & Tickets
+Kokoto Ticket G,8,99,0,Reward from Kokoto Elder for completing G-rank Kokoto Village requests,Coins & Tickets
+Pokke Ticket,5,99,0,Reward from Pokke Elder for completing Pokke Village requests,Coins & Tickets
+Pokke Ticket G,8,99,0,Reward from Pokke Elder for completing G-rank Pokke Village requests,Coins & Tickets
+Yukumo Ticket,5,99,0,Reward from Yukumo Elder for completing Yukumo Village requests,Coins & Tickets
+Yukumo Ticket G,8,99,0,Reward from Yukumo Elder for completing G-rank Yukumo Village requests,Coins & Tickets
+Wycademy Ticket,5,99,0,Reward from Chief Researcher for hunting Gold Crown-sized monsters,Coins & Tickets
+Wycademy Ticket G,8,99,0,Reward from Chief Researcher for completing G-rank quests,Coins & Tickets
+Soaratorium Ticket,7,99,0,Reward from Wyventurer for completing High-rank village quests,Coins & Tickets
+Pub Ticket,8,99,0,Reward from Pub Manager for completing certain G-rank quests,Coins & Tickets
+Palico Ticket,5,99,0,Reward for using Palicos in quests,Coins & Tickets
+Palico Ticket G,8,99,0,Reward for using Palicos in G-rank quests,Coins & Tickets
+Airship Ticket,5,99,0,Reward for completing quests,Coins & Tickets
+Airship Ticket G,8,99,0,Reward for completing G-rank quests,Coins & Tickets
+Bistro Ticket,5,99,0,Reward from Felyne Chefs for eating at the Canteen,Coins & Tickets
+Bistro Ticket G,8,99,0,Reward from Gourmew Chef for eating at the Canteen,Coins & Tickets
+Trade Ticket,5,99,0,"Reward from Neko (Means ""Cat"") for using the Trader",Coins & Tickets
+Footbath Ticket,5,99,0,Reward from Bath Cattendant for completing requests from Yukumo Village  footbath visitors,Coins & Tickets
+Bronze Guild Ticket,5,99,0,Reward from quests given by Guild Managers,Coins & Tickets
+Gold Guild Ticket,8,99,0,Reward from some G-rank multi-monster quests,Coins & Tickets
+Blackbelt Ticket,4,99,0,Reward from Low-rank Arena Quests,Coins & Tickets
+Expert Ticket,5,99,0,Reward from High-rank Arena Quests,Coins & Tickets
+Expert Ticket G,8,99,0,Reward from G-rank Arena Quests,Coins & Tickets
+Legend Ticket,6,99,0,Reward from High-rank Arena Quests,Coins & Tickets
+Legend Ticket G,9,99,0,Reward from G-rank Arena Quests,Coins & Tickets
+VE Ticket,4,99,0,Reward for accumulating HR Points,Coins & Tickets
+VE Deluxe Ticket,4,99,0,Reward for accumulating HR Points,Coins & Tickets
+VE Bronze Ticket,4,99,0,Reward for Raising the Unity Level on your Guild Card,Coins & Tickets
+VE Silver Ticket,4,99,0,Reward for Raising the Unity Level on your Guild Card,Coins & Tickets
+VE Golden Ticket,4,99,0,Reward for Raising the Unity Level on your Guild Card,Coins & Tickets
+VE Cosmic Ticket,4,99,0,Reward for Raising the Unity Level on your Guild Card,Coins & Tickets
+EX Rathalos Ticket EX,6,99,0,"Reward from Village Quest ""Advanced: Invoking Rath""",Coins & Tickets
+EX Rathalos Ticket S EX,7,99,0,"Reward from Hub Quest ""Wyverns All Around Us""",Coins & Tickets
+EX Lavasioth Ticket EX,6,99,0,"Reward from Hub Quest ""The Magma's Rage""",Coins & Tickets
+EX Tigrex Ticket EX,6,99,0,"Reward from Hub Quest ""Tigrex, Tigrex, Burning Bright""",Coins & Tickets
+EX Tigrex Ticket S EX,7,99,0,"Reward from Village Quest ""Advanced: Seismic Scares""",Coins & Tickets
+EX Zinogre Ticket EX,6,99,0,"Reward from Hub Quest ""The Wolf and the Footbath""",Coins & Tickets
+EX Brachydios Ticket EX,6,99,0,"Reward from Hub Quest ""Steam and Smoke""",Coins & Tickets
+EX Gore Magala Ticket EX,6,99,0,"Reward from Hub Quest ""Watch Your Steppe""",Coins & Tickets
+EX S.Magala Ticket EX,7,99,0,"Reward from Village Quest ""Advanced: Nothing is Sacred""",Coins & Tickets
+EX Daora Ticket EX,7,99,0,"Reward from Event Quest ""The Steel Vanguard""",Coins & Tickets
+EX Chameleos Ticket EX,7,99,0,"Reward from Event Quest ""The Formless One""",Coins & Tickets
+EX Teostra Ticket EX,7,99,0,"Reward from Event Quest ""The Exploding Flame King""",Coins & Tickets
+EX G.Rathian Ticket EX,7,99,0,"Reward from Event Quest ""Moonlit Tryst""",Coins & Tickets
+EX S.Rathalos Ticket EX,7,99,0,"Reward from Event Quest ""Moonlit Tryst""",Coins & Tickets
+EX Congalala Ticket EX,8,99,0,"Reward from Hub Quest ""Interruption: Conga Line""",Coins & Tickets
+EX Lao-Shan Lung Ticket EX,9,99,0,"Reward from Hub Quest ""Material Old Girl""",Coins & Tickets
+EX Lao-Shan Lung Ticket S EX,9,99,0,"Reward from Event Quest ""Lao-Shan Lung Time No See""",Coins & Tickets
+EX C.Fatalis Ticket EX,9,99,0,"Reward from Event Quest ""To Slay a Legend""",Coins & Tickets
+EX Old Fatalis Ticket EX,9,99,0,"Reward from Event Quest ""Defy the Prophecy""",Coins & Tickets
+Hyper Hunter I,6,99,0,Reward from 6â Hyper Monster quests,Coins & Tickets
+Hyper Hunter II,6,99,0,Reward from 7â Hyper Monster quests,Coins & Tickets
+Hyper Hunter III,6,99,0,Reward from 7â Hyper Monster marathon and 6â Threat Level Hyper Monster  quests,Coins & Tickets
+Hyper Hunter IV,8,99,0,Reward from G2 Hyper Monster quests,Coins & Tickets
+Hyper Hunter V,8,99,0,Reward from G3 Hyper Monster quests,Coins & Tickets
+Hyper Hunter VI,8,99,0,Reward from G4 Hyper Monster quests,Coins & Tickets
+Redhelm Hunter I - XV -15,6-8,99,0,Reward from Redhelm Arzuros Special Permit Quests,Coins & Tickets
+Snowbaron Hunter I - XV -15,6-8,99,0,Reward from Snowbaron Lagombi Special Permit  Quests,Coins & Tickets
+Stonefist Hunter I - XV -15,6-8,99,0,Reward from Stonefist Hermitaur Special Permit  Quests,Coins & Tickets
+Dreadqueen Hunter I - XV -15,6-8,99,0,Reward from Dreadqueen Rathian Special Permit  Quests,Coins & Tickets
+Drilltusk Hunter I - XV -15,6-8,99,0,Reward from Drilltusk Tetsucabra Special Permit  Quests,Coins & Tickets
+Silverwind Hunter I - XV -15,6-8,99,0,Reward from Silverwind Nargacuga Special Permit  Quests,Coins & Tickets
+Crystalbeard Hunter I - XV -15,6-8,99,0,Reward from Crystalbeard Uragaan Special Permit  Quests,Coins & Tickets
+Deadeye Hunter I - XV -15,6-8,99,0,Reward from Deadeye Yian Garuga Special Permit  Quests,Coins & Tickets
+Dreadking Hunter I - XV -15,6-8,99,0,Reward from Dreadking Rathalos Special Permit  Quests,Coins & Tickets
+Thunderlord Hunter I - XV -15,6-8,99,0,Reward from Thunderlord Zinogre Special Permit  Quests,Coins & Tickets
+Grimclaw Hunter I - XV -15,6-8,99,0,Reward from Grimclaw Tigrex Special Permit Quests,Coins & Tickets
+Hellblade Hunter I - XV -15,6-8,99,0,Reward from Hellblade Glavenus Special Permit  Quests,Coins & Tickets
+Nightcloak Hunter I - V -,8,99,0,Reward from Nightcloak Malfestio Special Permit  Quests,Coins & Tickets
+Rustrazor Hunter I - V -,8,99,0,Reward from Rustrazor Ceanataur Special Permit  Quests,Coins & Tickets
+Soulseer Hunter I - V -,8,99,0,Reward from Soulseer Mizutsune Special Permit  Quests,Coins & Tickets
+Boltreaver Hunter I - V -,8,99,0,Reward from Boltreaver Astalos Special Permit  Quests,Coins & Tickets
+Elderfrost Hunter I - V -,8,99,0,Reward from Elderfrost Gammoth Special Permit  Quests,Coins & Tickets
+Bloodbath Hunter I - V -,8,99,0,Reward from Bloodbath Diablos Special Permit  Quests,Coins & Tickets
+Map,1,1,0,Always in supply box,Supply
+First-aid Med,1,10,0,"Supply Box or gathering in Arena, Slayground, or Moat Arena or shiny drop from Felyne",Supply
+First-aid Med+,2,10,0,"Combine Honey and First-aid Med or Supply Box in G-rank quests and  high-end High-rank quests or gathering in Arena, Slayground, or Moat Arena",Supply
+Ration,1,10,0,"Supply Box or gathering in Arena, Slayground, or Moat Arena, also a Melynx Shiny Drop",Supply
+Portable Spit,1,1,0,Supply Box during the tutorial quests,Supply
+Mini Whetstone,1,10,0,"Supply Box or gathering in Arena, Slayground, or Moat Arena",Supply
+EZ Max Potion,2,3,0,Supply Box during specific Quests,Supply
+EZ Lifepowder,2,2,0,Supply Box during specific Quests,Supply
+EZ Dust of Life,3,2,0,Supply Box during specific Quests,Supply
+EZ Hunter's Drink,3,3,0,Supply Box during specific Quests,Supply
+EZ Flash Bomb,2,1,0,"Supply Box or gathering in Arena, Slayground, or Moat Arena, also a Felyne Shiny Drop",Supply
+EZ Sonic Bomb,2,1,0,Supply Box during specific Quests,Supply
+EZ Farcaster,2,1,0,Supply Box during specific Quests,Supply
+EZ Shock Trap,3,1,0,"Supply Box or gathering in Arena, Slayground, or Moat Arena, also a Melynx Shiny Drop",Supply
+EZ Pitfall Trap,3,1,0,Supply Box during specific Quests,Supply
+EZ Barrel Bomb L,3,1,0,"Supply Box during specific Quests, gathering in Arena, Slayground, or Moat Arena",Supply
+Anti-dragon Bomb,3,10,0,Supply Box during specific Quests,Supply
+Ballista Ammo,5,10,0,"Supply Box during specific Quests, gathering in Sacred  Pinnacle, Wyvern's End, Fortress, Castle Schrade",Supply
+One-shot Binder,3,1,0,"Shiny Drop from Nakarkos,  gathering in Castle Schrade",Supply
+Dense Marcoal,5,1,0,Supply Box in Fortress,Supply
+Cannon Ammo,5,1,0,"Gathering in Fortress and  Castle  Schrade, supply drop in Forlorn Citadel",Supply
+Paw Pass Ticket,5,1,0,Supply Box during Harvest Tour and Gather/Hunt-a-thon Quests,Supply
+Throwing Knife,1,5,0,Gather in Lynian stockpiles or ruined campsites,Supply
+Poison Knife,1,5,0,Combine Throwing Knife and Toadstool,Supply
+Sleep Knife,1,5,0,Combine Throwing Knife and Sleep herb,Supply
+Paralysis Knife,1,5,0,Combine Throwing Knife and Parashroom,Supply
+Tranq Knife,4,5,0,Combine Tranquilizer and Throwing Knife,Supply
+Royal Honey,3,10,120,Gather from beehives in the Misty Peaks,Account
+Unique Mushroom,2,10,40,"Carve Mosswine or gather  from Mushroom spots in Jurassic Frontier, Verdant Hills,  Misty Peaks, Deserted  Island, Marshlands, Ancestral Steppe, and Jungle",Account
+Choice Mushroom,2,10,300,"Carve High and G-Rank Mosswine or gather from Mushroom spots in Jurassic  Frontier, Verdant Hills, Misty Peaks, Deserted Island, Marshlands, Ancestral  Steppe, and Jungle",Account
+Ripened Mushroom,3,10,50,Shiny Drop from Altaroth  when they have Blue Stomach,Account
+Great Shroom,3,10,500,Gather from Mushroom spots in the Misty Peaks,Account
+Abyssal Mushroom,2,10,120,Gather from Mushroom spots in the depths of the Jurassic  Frontier,Account
+Super Sprout,2,10,60,Gather from bamboo shoots in the Misty Peaks,Account
+Tropical Berry,3,10,40,Gathering from the Dunes or Desert,Account
+Mountain Herbs,4,20,50,Gathering at plants in the Arctic Ridge,Account
+Unique Fern,2,20,55,Gathering at plants in the Jurassic Frontier,Account
+Choice Fern,4,10,550,Gathering at plants in High-rank Jurassic Frontier,Account
+Goldenfish,3,10,500,Fishing in most areas or by using a Goldenfish Bait,Account
+Silverfish,5,10,1500,"Fishing in High-rank Misty Peaks, Dunes, Deserted Island, Marshlands, Primal Forest,  Desert, and Jungle",Account
+Brocadefish,3,10,540,Fishing in Jurassic Frontier and Arctic Ridge,Account
+King Brocadefish,5,10,1620,Fishing in High-rank Jurassic Frontier and Arctic Ridge,Account
+Premium Sashimi,5,10,180,Fishing in Verdant  Hills,Account
+Royal Rhino,2,10,80,"Catch in Primal  Forest, Marshlands, Jurassic Frontier, and Verdant Hills",Account
+Divine Rhino,4,10,1000,Catch in High rank areas,Account
+Silver Cricket,2,10,210,"Catch in Deserted Island, Ancestral  Steppe, Volcanic Hollow, and Ruined  Pinnacle",Account
+Gold Cricket,4,10,980,"Catch in High-rank Deserted Island, Ancestral  Steppe, Volcanic Hollow, and Ruined  Pinnacle",Account
+Immortal Moth,2,10,160,Catch in Jurassic Frontier,Account
+Large Immortal Moth,4,10,1200,Catch in High-rank Jurassic Frontier,Account
+Auristone Piece,3,10,200,"Mining in Verdant  Hills, Arctic  Ridge, Dunes, Deserted  Island, Marshlands, Ancestral Steppe, Desert, and Jungle",Account
+Auristone Chunk,4,10,1000,"Mining in High-rank Verdant Hills, Arctic Ridge, Dunes, Deserted  Island, Marshlands, Ancestral Steppe, Desert, and Jungle",Account
+Balmstone Piece,3,10,180,Mining in Misty  Peaks,Account
+Balmstone Chunk,4,10,900,Mining in High-rank Misty Peaks,Account
+Dragon Amber Piece,3,10,180,Mining in Jurassic Frontier,Account
+Dragon Amber Chunk,4,10,1400,Mining in High-rank Jurassic Frontier,Account
+Crystal Bone,2,10,60,Mining in Primal  Forest,Account
+Bloodstone,3,10,90,Mining in Frozen  Seaway,Account
+Deep Bloodstone,4,10,900,Mining in Frozen  Seaway,Account
+Coal,3,10,60,Mining in Volcano and Volcanic  Hollow or gather from Uragaan's body,Account
+Volatile Coal,4,10,1250,Mining in High-rank Volcano  and Volcanic  Hollow or gather from Uragaan's body,Account
+Fossilized Bone,2,10,60,Gathering from Bones Piles from most Areas,Account
+Decayed Scale,5,10,200,Gather or mine from Kushala Daora skin,Account
+White Liver,2,10,50,Carve from Kelbi and Anteka,Account
+Slagtoth Oil,3,10,60,Carve Slagtoth,Account
+Secret Stash,3,10,80,Shiny Drop from Melynx,Account
+Round Acorn,3,10,0,Shiny Drop from Felyne,Account
+Fine Stomach,2,10,400,Shiny Drop from Altaroth  when they have Blue Stomach,Account
+Luminous Stomach,3,10,800,Shiny Drop from Altaroth  when they have Gold Stomach,Account
+Monster Guts,3,10,90,Carve Zamite,Account
+Piscine Liver,3,10,90,"Carve Cephalos, Shiny Drop  from Cephadrome",Account
+Popo Tongue,3,10,60,Carve Popo,Account
+Apceros Liver,3,10,200,Carve Apceros,Account
+Ancient Berry,2,10,120,Shiny Drop from Larinoth  while they are eating,Account
+Water Lily Root,3,10,80,Shiny Drop from Larinoth  while they are drinking,Account
+Water Lily Tuber,4,10,800,Shiny Drop from Larinoth  while they are drinking,Account
+Moofah Fur,3,10,50,Shiny Drop or Carve from Moofah,Account
+Beautiful Shell,2,10,40,Gather at beachside bone piles in the Jungle,Account
+Comet Rock,4,10,1250,Mine in Ruined  Pinnacle,Account
+Tall Mushroom,4,10,700,Gather mushrooms in Ruined Pinnacle,Account
+Dragon Healing Crystal,8,99,5000,Gather from Lao-Shan  Lung's back,Account
+Gargwa Egg,4,1,0,Egg Drop from Gargwa,Account
+Gold Gargwa Egg,5,1,500,Golden Egg Drop from Gargwa,Account
+Wyvern Egg,5,1,0,Gathering from the Wyvern Nest in each Area.,Account
+Sootstone Ore,5,1,800,Mine the Special Ore Spot in Low-rank Marshlands and High-/Grank Arctic Ridge and  Volcanic  Hollow,Account
+Quartz Ore,5,1,2500,Mine the Special Ore Spot in High and G-rank Marshlands,Account
+Powderstone,5,1,800,Gathering in the Volcanic Hollow and Volcano,Account
+Carnivore Egg,5,1,700,Gathering from the Carnivore Nest in the Arctic Ridge and Jungle and G-rank Jurassic  Frontier,Account
+Meteor Chunk,5,1,1000,Mining from the Meteor in Area 8 of the Dunes,Account
+Eternal Fossil,5,1,1500,Mining from the Fossil in Area 11 of the Jurassic  Frontier,Account
+Herbivore Egg,5,1,700,Gathering from the Herbivore Nest in Area 10 of the Desert,Account
+Guild Flag,3,1,0,Supply Box during Kirin Quests  in the Arctic  Ridge,Account
+Gargwa Guano,2,10,25,Shiny Drop from Gargwa,Account
+Territorial Dung,3,10,500,Shiny Drop from Blangonga and Congalala,Account
+Territorial Dung+,5,10,2500,Shiny Drop from High-rank Blangonga and Congalala,Account
+Drone Substance,3,10,450,Shiny Drop from Neopteron and Temnoceran Class Monsters,Account
+Queen Substance,5,10,2200,Shiny Drop from Neopteron and Temnoceran Class Monsters,Account
+Toad Tear,3,10,400,Low-rank Shiny Drop from Amphibian Class Monsters,Account
+Large Toad Tear,5,10,1800,High rank Shiny Drop from Amphibian Class Monsters,Account
+Carapaceon Brains,3,10,10,Carve Hermitaur and Ceanataur,Account
+Carapaceon Brains+,3,10,50,Carve High-rank Hermitaur and Ceanataur,Account
+Crab Pearl,3,10,500,Shiny Drop from Carapaceon Class Monsters,Account
+Crab Pearl+,3,10,2500,Shiny Drop from High rank Carapaceon Class Monsters,Account
+Wyvern Tear,3,10,500,Low-rank Shiny Drop from Wyvern Class Monsters,Account
+Large Wyvern Tear,3,10,2500,High rank Shiny Drop from Wyvern Class Monsters,Account
+Beast Tear,3,10,400,Low-rank Shiny Drop from Fanged Beast Class Monsters,Account
+Large Beast Tear,5,10,1800,High rank Shiny Drop from Fanged Beast Class Monsters,Account
+Dragon Treasure,3,10,800,Shiny Drop from Elder  Dragons,Account
+Old Dragon Treasure,5,10,4000,Shiny Drop from High rank Elder Dragons,Account
+Frenzy Shard,4,10,400,Shiny Drop from Low-rank and High-rank Gore Magala,Account
+Frenzy Crystal,5,10,700,Shiny Drop from Low/High-rank Gore Magala and Low-rank Shagaru  Magala,Account
+Vile Frenzy Crystal,6,10,3000,Shiny Drop from G-rank Gore Magala and High/G-rank Shagaru  Magala,Account
+Khezu Whelp,4,10,400,Gather or mine from Kushala Daora skin,Account
+Timeworn Ballista Shot,5,10,0,Shiny Drop from Nakarkos,Account
+Steel Egg,4,99,1000,"Reward from Low and High-rank Accounting quests, Wycademy Point  Subquests, Horns Coins Exchange",Account
+Silver Egg,4,99,10000,"Reward from various High and G-rank Event/Marathon/Mining quests, Horns  Coins Exchange",Account
+Golden Egg,4,99,20000,"Reward from high-end High and G-rank Event/Marathon/Mining quests, Horns  Coins Exchange, mine Ahtal-Neset",Account
+Platinum Egg,9,99,100000,Reward from Extra Special Permit Quests and high-end G-rank Event Quests,Account
+Felyne Fur Ruby,6,99,1000,"Lynian encampment and secret gathering point in High-Rank Verdant Hills,  Marshlands, and Desert",Miscellaneous
+Rusted Fragment,4,99,180,Send Meownster Hunters to Rare Spots in the Low-rank Volcano,Miscellaneous
+Ancient Fragment,6,99,360,Send Meownster Hunters to Rare Spots in the High-rank Volcano,Miscellaneous
+Mythical Fragment,8,99,720,Send Meownster Hunters to Rare Spots in the G-rank Volcano,Miscellaneous
+Sinister Cloth,4,99,480,Send Meownster Hunters to Rare Spots in the Low-rank Wetlands,Miscellaneous
+Sinister Darkcloth,6,99,960,Send Meownster Hunters to Rare Spots in the High-rank Wetlands,Miscellaneous
+Sinister Gloomcloth,8,99,1920,Send Meownster Hunters to Rare Spots in the G-rank Wetlands,Miscellaneous
+Extravagant Artifact,4,99,910,Send Meownster Hunters to Rare Spots in the Low-rank Coast,Miscellaneous
+Opulent Artifact,6,99,1820,Send Meownster Hunters to Rare Spots in the High-rank Coast,Miscellaneous
+Decadent Artifact,8,99,3640,Send Meownster Hunters to Rare Spots in the G-rank Coast,Miscellaneous
+Broken Statue,4,99,300,Send Meownster Hunters to Rare Spots in the Low-rank Forest or Desert,Miscellaneous
+Giant Broken Statue,6,99,600,Send Meownster Hunters to Rare Spots in the High-rank Forest or Desert,Miscellaneous
+Broken Cat God Statue,8,99,1200,Send Meownster Hunters to Rare Spots in the G-rank Forest or Desert,Miscellaneous
+Dark Piece,5,99,260,"Mine the Giant Sword in Pokke Village, reward from Fatalis Quests",Miscellaneous
+Dark Stone,5,99,530,"Mine the Giant Sword in Pokke Village, reward from Fatalis Quests",Miscellaneous
+Felyne Kettle,4,99,630,"Reward from Village Quest ""Drawing the Waterline""",Miscellaneous
+Yukumo Riceflour,4,99,310,"Reward from Village Quest ""Hunt-a-thon: Gypceros""",Miscellaneous
+Doll Parts,4,99,490,"Reward from Hub Quest ""Fossilized Memories""",Miscellaneous
+Weapon Codex,5,99,0,"Reward from Argosy Captain for completing Village Quest ""Ahoy! Royal Ludroth"" (only  one)",Miscellaneous
+Bowgun Codex,5,99,0,"Reward from Argosy Captain for completing Village Quest ""The Perilous Pair"" (only  one)",Miscellaneous
+Deluxe Barrel Timber,8,99,850,"Reward from Hub Quest ""Pleasantly Sozzled""",Miscellaneous
+Ancient Talisman,9,99,3500,"Reward from Hub Quest ""The Ol' Razzle Dazzle""",Miscellaneous
+Damaged Amber,8,99,1900,"Reward from Hub Quest ""Commission: Hyper Kecha Wacha""",Miscellaneous
+Cloudy Fragment,9,99,3900,"Reward from Hub Quest ""Primal Screams""",Miscellaneous
+Strange Mask,9,99,2600,"Reward from Hub Quest ""Arena Bakalaka-Battle! Woo!""",Miscellaneous
+Sunmarge Crystal,9,99,2600,"Reward from Hub Quest ""Uragaan Grief""",Miscellaneous
+Ocean Pyroxene,9,99,3800,"Reward from Hub Quests ""Seeking the Sea King,"" ""Zinogre-enthusiasm,"" and ""Even Brachydios Need A Holiday""",Miscellaneous
+Fluffy White Ball,7,99,780,"Reward from Village Quest ""The Perils of Commerce""",Miscellaneous
+Fluffy Black Ball,9,99,2700,"Reward from Hub Quest ""Sweets for My Sweets""",Miscellaneous
+Fusion Material - Head,8,99,0,Horns Coins Exchange,Miscellaneous
+Fusion Material - Chest,8,99,0,Horns Coins Exchange (HR break required),Miscellaneous
+Fusion Material - Arms,8,99,0,Horns Coins Exchange (HR break required),Miscellaneous
+Fusion Material - Waist,8,99,0,Horns Coins Exchange (HR break required),Miscellaneous
+Fusion Material - Legs,8,99,0,Horns Coins Exchange (HR break required),Miscellaneous
+F Fusion Material - Head,8,99,0,Horns Coins Exchange,Miscellaneous
+F Fusion Material - Chest,8,99,0,Horns Coins Exchange,Miscellaneous
+Lagniapple,4,99,100,"Gather from plants near Lynian encampments in Low-rank areas, reward  from Low-rank Prowler Quests",Miscellaneous
+Big Lagniapple,6,99,200,"Gather from plants near Lynian encampments in High-rank areas, reward  from High-rank Prowler Quests",Miscellaneous
+Huge Lagniapple,8,99,300,"Gather from plants near Lynian encampments in G-rank areas, reward from  G-rank Prowler Quests",Miscellaneous
+Training Guide,4,99,500,Reward for leveling up Palicoes,Miscellaneous
+Training Codex,6,99,1000,Reward for leveling up Palicoes,Miscellaneous
+Training Compendium,8,99,2000,Reward for leveling up Palicoes,Miscellaneous
+Felyne Codex,6,99,2000,Reward from certain Village High-rank and G-rank Prowler Quests,Miscellaneous
+Tomato Juice,5,5,0,"Reward from Event Quest ""CoroCoro: Lost in the Swamp""",Event
+Fairy Tail Mark,5,5,0,"Reward from Event Quest ""The King of Lynians!""",Event
+F Pirate Coin J,5,5,0,"Reward from Event Quest ""Jump: Crimson Strongmen""",Event
+Cardboard,5,5,0,"Reward from Event Quest ""Initiate: Operation Moofah""",Event
+Uniqlo Coin,5,5,0,"Reward from Event Quest ""The Uniqlo Avant-garde""",Event
+Crows Coin,5,5,0,"Reward from Event Quest ""Crows: The Black Crows""",Event
+Bicycle Club Application,5,5,0,"Reward from Event Quest ""Yowamushi Pedal: Princess""",Event
+Arena Ticket,5,5,0,"Reward from Event Quest ""Baki: Biggest vs. Strongest""",Event
+Grandpaw Coin,5,5,0,"Reward from Event Quest ""CoroCoro: Big Bad Bugs""",Event
+CoroCoro Ticket,5,5,0,"Reward from Event Quest ""CoroCoro: Rolling Bowlers""",Event
+Ushio Coin,5,5,0,"Reward from Event Quest ""Ushio & Tora: White Mizutsune""",Event
+Pluto Stardust,5,5,0,"Reward from Event Quest ""The Exploding Flame King""",Event
+Magi Coin,5,5,0,"Reward from Event Quest ""Magi: Rescue from the Fall""",Event
+Roll of Fate,5,5,0,"Reward from Event Quest ""Yu-Gi-Oh: A Beautiful Wyvern""",Event
+Pirate Ticket J,5,5,0,"Reward from Event Quest ""Jump: Boiling Magma""",Event
+Famitsu Ticket,5,5,0,"Reward from Event Quest ""Famitsu: Mizutsune Feature""",Event
+Dengeki Ticket,5,5,0,"Reward from Event Quest ""Dengeki: Turbulent Seas""",Event
+Uniqlo Coin S,5,5,0,"Reward from Event Quest ""Uniqlo Shock Fest""",Event
+Wind Waker,5,5,0,"Reward from Event Quest ""A Hero's Return""",Event
+Arwing Boarding Pass,5,5,0,"Reward from Event Quest ""Star Fox: Battle at Arctic Ridge""",Event
+Super Mushroom,5,5,0,"Reward from Event Quest ""Mario: The White Donkey Kong?""",Event
+Design Pattern,5,5,0,"Reward from Event Quest ""Animal Crossing: Picnic Day""",Event
+Triforce,5,5,0,"Reward from Event Quest ""The Three Virtues""",Event
+Samus Coin,5,5,0,"Reward from Event Quest ""Metroid: Special Mission""",Event
+Goddess's Grace,5,5,0,"Reward from Event Quest ""The Steel Vanguard""",Event
+Goddess's Embrace,5,5,0,"Reward from Event Quest ""The Voracious King""",Event
+SF Coin,5,5,0,"Reward from Event Quest ""SF: Ultimate Entrance Exam""",Event
+Red Orb,5,5,0,"Reward from Event Quest ""DMC: The Seltas Queen's Cry""",Event
+Ceratanium,5,5,0,"Reward from Event Quest ""Mega Man: Yellow Devil""",Event
+Hero's Seal,5,5,0,"Reward from Event Quest ""Capcom: Brilliant Orchestra""",Event
+Baby Journal,5,5,0,In Item Box at the start of the game,Event
+Sunsnug Journal,5,5,0,"Reward from Event Quest ""âFelyne Village: The Tourney""",Event
+Fan Club Newsletter,5,5,0,"Reward from Event Quest ""Fan Club: Arena Action""",Event
+Fan Club Application,5,5,0,"Reward from Event Quest ""Fan Club: Great All Stars""",Event
+Fan Club Invite,5,5,0,"Reward from Event Quest ""Fan Club: Remobra Removal""",Event
+Puppet Ticket,5,5,0,"Reward from Event Quest ""Capcom: White & Black""",Event
+Great Stone,5,5,0,"Reward from Event Quest ""Capcom: The Ruler's Rage""",Event
+Courier's Letter,5,5,0,"Reward from Event Quest ""Too Hot to Handle""",Event
+JDL Badge,5,5,0,"Reward from Event Quest ""Case Closed: Monster Files""",Event
+Salaryman Coin,5,5,0,"Reward from Event Quest ""CoroCoro: Fart of Darkness""",Event
+Silver Crystal,5,5,0,"Reward from Event Quest ""Nakayoshi: Silver Crystal""",Event
+Kaioh Certificate,5,5,0,"Reward from Event Quest ""Baki: Deadly Claws""",Event
+WORST Coin,5,5,0,"Reward from Event Quest ""WORST: Skull Motif""",Event
+Celestial Scroll,5,5,0,"Reward from Event Quest ""Okami: Most Wanted""",Event
+Arthur's Armor,5,5,0,"Reward from Event Quest ""Ghosts 'n Goblins: Seeing Red""",Event
+Turnabout Ticket,5,5,0,"Reward from Event Quest ""Turnabout Takedown""",Event
+Navirou Ticket,5,5,0,In Item Box at the start of the game,Event
+F Spirit Stone,5,5,0,"Reward from Event Quest ""Capcom: Prowler's Spirit""",Event
+Famitsu Coupon,5,5,0,"Reward from Event Quest ""Famitsu: Kecha the Scoop!""",Event
+Dengeki Ticket XX,5,5,0,"Reward from Event Quest ""Dengeki: Top of Old Sparky""",Event
+Buccaneer Ticket J,5,5,0,"Reward from Event Quest ""Jump: The Desert Crown""",Event
+Flying Xin Mark,5,5,0,"Reward from Event Quest ""Kingdom: Test of the Best!""",Event
+Evidence,5,5,0,"Reward from Event Quest ""Case Closed: Desert Arrest!""",Event
+Magic Realm Key,5,5,0,"Reward from Event Quest ""Shonen: Winged Nocturne""",Event
+Taisha-ryu Codex,5,5,0,"Reward from Event Quest ""Drifters: Isle of Lost Souls""",Event
+Zaruba Fragment,5,5,0,"Reward from Event Quest ""Into the Maw of Darkness""",Event
+Zelda Ticket,5,5,0,"Reward from Event Quest ""The Legend of Zelda: Power""",Event
+Zelda Ticket G,5,5,0,"Reward from Event Quest ""The Legend of Zelda: Courage""",Event
+Zelda Ticket P,5,5,0,"Reward from Event Quest ""The Legend of Zelda: Wisdom""",Event
+Sealing Shield,5,5,0,"Reward from Event Quest ""Fire Emblem: Warding Despair""",Event
+Club Promotion,5,5,0,"Reward from Event Quest ""Fan Club: Climbing The Ranks""",Event
+Option,5,5,0,"Reward from Event Quest ""Strider: Frozen Mission""",Event
+Studio Pass,5,5,0,"Reward from Event Quest ""Flames of Savagery at USJ""",Event
+Happy Egg,5,5,0,"Reward from Event Quest ""サンリオ・ひとぐでしようぜ""",Event
+Spirits Stone,5,5,0,"Reward from Event Quest ""カプコン・燃えるスピリッツ""",Event
+Extraordinary Pass,5,5,0,"Reward from Event Quest ""Dance of Dreams at USJ""",Event
+Gold Studio Pass,5,5,0,"Reward from Event Quest ""Blazing Thunder at USJ""",Event
+Wonderful Pass,5,5,0,"Reward from Event Quest ""Frost and Fire at USJ""",Event
+Salmon Fillet,5,5,0,"Reward from Event Quest ""サンリオ・お魚たちを救え!""",Event
+Macross Delta Coin,5,5,0,"Reward from Event Quest ""マクロスΔ・新たなる戦乙女達""",Event
+Wonderful Egg,5,5,0,"Reward from Event Quest ""サンリオ・ひとぐでしようニャ""",Event
+Hunter Certificate,5,5,0,"Reward from Event Quest ""ハンター×ハンター・最終試験""",Event
+Unique Pass,5,5,0,"Reward from Event Quest ""ＵＳＪ・幻惑なる２頭の輪舞曲""",Event
+Original Pass,5,5,0,"Reward from Event Quest ""ＵＳＪ・天翔ける輝星の軌跡""",Event
+Exceptional Pass,5,5,0,"Reward from Event Quest ""ＵＳＪ・霊峰に吹き荒れる嵐""",Event
+Novel Pass,5,5,0,"Reward from Event Quest ""ＵＳＪ・乱れ荒れ暴れ狂う角""",Event
+Live Ticket,5,5,0,"Reward from Event Quest ""サンリオ・紅蓮の炎に抱かれて""",Event
