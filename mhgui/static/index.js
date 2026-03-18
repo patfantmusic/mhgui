@@ -5,6 +5,20 @@
         exclude.add(element.value);
     });
 
+    function debounce(func, delay) {
+        let timeoutId;
+
+        return function (...args) {
+            // Clear the previous timer if the user types again
+            clearTimeout(timeoutId);
+
+            // Start a new timer
+            timeoutId = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    }
+
     function item_card(suggestion) {
         return `
             <div class="d-flex flex-row mb-3">
@@ -27,7 +41,7 @@
         `;
     }
 
-    document.getElementById("item-search").addEventListener("input", async function (event) {
+    async function handleSearch(event) {
         const query = event.target.value;
         const suggestionsList = document.getElementById("item-results");
         var result = "";
@@ -37,7 +51,10 @@
             result += item_card(suggestion);
         });
         suggestionsList.innerHTML = result;
-    });
+    }
+
+    const debouncedSearch = debounce(handleSearch, 300);
+    document.getElementById("item-search").addEventListener("input", debouncedSearch);
 
     document.querySelectorAll(".exclude-check").forEach((element) => {
         element.addEventListener("change", function (event) {
