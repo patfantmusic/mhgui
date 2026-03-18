@@ -1,1 +1,1 @@
-web: poetry run flask --app mhgui.app run
+web: poetry run gunicorn "mhgui.app:create_app()"
