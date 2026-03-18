@@ -1,6 +1,9 @@
 (function () {
 
     var exclude = new Set();
+    document.querySelectorAll(".exclude-check").forEach((element) => {
+        exclude.add(element.value);
+    });
 
     function item_card(suggestion) {
         return `
