@@ -25,15 +25,24 @@ class DBClient:
         results = self.conn.execute(query, [hr, village]).fetchall()
         return results
 
-    def search_items(self, text: str | None = None):
-        fields = ["name", "rarity", "capacity", "value", "how_to_get", "category"]
+    def search_items(self, text: str | None = None, exclude: list[str] | None = None):
+        fields = [
+            "name",
+            "rarity",
+            "capacity",
+            "value",
+            "how_to_get",
+            "category",
+            "icon",
+        ]
         pattern = f"%{text}%"
         query = f"""
             SELECT {", ".join(fields)}
             FROM wiki_items
             WHERE name ILIKE ?
+            AND category NOT IN (SELECT unnest(?))
         """
-        results = self.conn.execute(query, [pattern])
+        results = self.conn.execute(query, [pattern, exclude or []])
         return [dict(zip(fields, row)) for row in results.fetchall()]
 
 

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 from mhgui.db import DBClient
 
@@ -14,4 +14,5 @@ def index():
 @application.route("/suggestions/<query>")
 def suggestions(query: str):
     client = DBClient()
-    return client.search_items(query)
+    exclude = request.args.get("exclude").split(",")
+    return client.search_items(query, exclude=exclude)

@@ -14,9 +14,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <input id="item-search" type="text" list="item-suggestions" />
-        <div class="accordion" id="item-results">
+    <div class="m-3">
+        <h1 class="mb-3">MHGUi Item Search Alpha</h1>
+        <form>
+            <div class="mb-3">
+                <label for="item-search" class="form-label">Text</label>
+                <input class="form-control" id="item-search" type="text" list="item-suggestions" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Exclude</label>
+                <div class="form-check">
+                    <input class="form-check-input exclude-check" type="checkbox" value="Supply"
+                        id="exclude-supply-check" />
+                    <label class="form-check-label" for="exclude-supply-check">
+                        Supply Items
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input exclude-check" type="checkbox" value="Event"
+                        id="exclude-event-check" />
+                    <label class="form-check-label" for="exclude-event-check">
+                        Event Rewards
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div id="item-results">
         </div>
     </div>
 </body>
