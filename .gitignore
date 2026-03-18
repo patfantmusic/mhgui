@@ -1,1 +1,3 @@
 */__pycache__
+mhgui/scrape/data/*.csv
+mhgui/scrape/cache/*.html

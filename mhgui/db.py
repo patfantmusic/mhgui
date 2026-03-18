@@ -38,7 +38,7 @@ class DBClient:
         pattern = f"%{text}%"
         query = f"""
             SELECT {", ".join(fields)}
-            FROM wiki_items
+            FROM 'mhgui/scrape/data/items.csv'
             WHERE name ILIKE ?
             AND category NOT IN (SELECT unnest(?))
         """
