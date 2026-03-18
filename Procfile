@@ -1,1 +1,1 @@
-web: poetry run gunicorn "mhgui.app:create_app()"
+web: gunicorn mhgui.app
