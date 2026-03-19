@@ -7,10 +7,10 @@ async function fetchItems(query, excludeSet) {
     try {
         const sql = `
             SELECT * FROM items
-            WHERE name ILIKE ?
+            WHERE regexp_replace(lower(name), '[^a-z0-9]', '', 'g') LIKE '%' || regexp_replace(lower(?), '[^a-z0-9]', '', 'g') || '%'
             AND category NOT IN (${placeholders.join(', ')})
         `;
-        const results = await queryDB(sql, [`%${query}%`, ...excludeArray]);
+        const results = await queryDB(sql, [query, ...excludeArray]);
         return results;
     } catch (error) {
         console.error("Fetch error:", error);
@@ -22,7 +22,7 @@ async function fetchMaterials(query) {
     try {
         const sql = `
             SELECT * FROM materials
-            WHERE name ILIKE ?
+            WHERE regexp_replace(lower(name), '[^a-z0-9]', '', 'g') LIKE '%' || regexp_replace(lower(?), '[^a-z0-9]', '', 'g') || '%'
         `
         const results = await queryDB(sql, [`%${query}%`]);
         return results;
