@@ -25,7 +25,7 @@
  */
 export function itemCard(item) {
     return `
-        <div class="d-flex flex-row mb-3">
+        <div class="card custom-card-dark d-flex flex-row mt-3">
             <div class="col-md-4">
                 <div class="card-body">
                     <img src="${item.icon}" width="48" height="48" alt="${item.name}">

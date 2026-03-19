@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request
 
 from mhgui.db import DBClient
 
@@ -8,7 +8,12 @@ application = Flask(__name__)
 
 @application.route("/")
 def index():
-    return render_template("index.html")
+    return redirect("/items")
+
+
+@application.route("/items")
+def items():
+    return render_template("items.html")
 
 
 @application.route("/suggestions/<query>")
