@@ -45,7 +45,7 @@ export async function loadAppData() {
 
         // Create table from the registered CSV
         await conn.query(`
-            CREATE TABLE items AS 
+            CREATE TABLE ${data.name} AS 
             SELECT * FROM read_csv_auto('${data.name}.csv')
         `);
 
