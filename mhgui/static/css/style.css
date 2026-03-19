@@ -1,14 +1,41 @@
+:root {
+    /* Define your custom font stacks */
+    --bs-body-font-family: 'Fira Sans', sans-serif;
+    --bs-title-font-family: 'Metamorphous', serif;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Metamorphous', serif !important;
+}
+
 /* Prevent the whole page from scrolling */
 html,
 body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-}
-
-body {
     display: flex;
     flex-direction: column;
+}
+
+/* Apply the title font specifically to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: 'Metamorphous';
+    text-transform: uppercase;
+    /* Optional: gives it a "Quest Board" feel */
+    letter-spacing: 1px;
 }
 
 .main-wrapper {

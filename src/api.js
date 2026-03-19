@@ -1,4 +1,7 @@
 import { queryDB } from './dbutils.js';
+import { itemCard, materialCard } from './templates.js';
+
+
 
 
 async function fetchItems(query, excludeSet) {
@@ -41,19 +44,19 @@ async function fetchMaterials(query) {
  * * @param {string} query - The search term entered by the user.
  * @param {Set<string>} excludeSet - A set of item values to exclude from results.
  * @param {Array<string>} typesSet - A set of types to include in results.
- * @returns {Promise<Suggestion[]>} A promise that resolves to an array of Suggestion objects.
+ * @returns {Promise<string[]>} A promise that resolves to an array of Suggestion objects.
  */
 export async function fetchSuggestions(query, excludeSet, typesSet) {
     var results = [];
 
     if (typesSet.includes("item")) {
         const items = await fetchItems(query, excludeSet);
-        results.push(...items);
+        results.push(...(items.map(itemCard)));
     }
 
     if (typesSet.includes("material")) {
         const materials = await fetchMaterials(query);
-        results.push(...materials);
+        results.push(...(materials.map(materialCard)));
     }
     return results;
 }

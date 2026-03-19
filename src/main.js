@@ -47,9 +47,9 @@ async function updateUI() {
         return;
     }
 
-    /** @type {Suggestion[]} */
+    /** @type {string[]} */
     const data = await fetchSuggestions(state.searchQuery, state.exclude, state.types);
-    resultsContainer.innerHTML = data.map(itemCard).join("");
+    resultsContainer.innerHTML = data.join("");
 }
 
 /**
