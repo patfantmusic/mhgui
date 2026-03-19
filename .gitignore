@@ -1,2 +1,5 @@
 */__pycache__
 mhgui/scrape/cache/*.html
+mhgui/static/dist/.vite
+mhgui/static/dist/assets
+node_modules

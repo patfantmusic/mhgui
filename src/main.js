@@ -1,6 +1,9 @@
 import { debounce } from './utils.js';
 import { itemCard } from './templates.js';
 import { fetchSuggestions } from './api.js';
+import { loadAppData } from './dbutils.js';
+
+loadAppData();
 
 /**
  * @typedef {Object} Suggestion
@@ -72,6 +75,7 @@ const handleSelectType = (/** @type {Event} */ event) => {
             break;
         case "items":
             state.types = ["item"]
+
             break;
         case "materials":
             state.types = ["material"]
