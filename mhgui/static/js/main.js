@@ -15,15 +15,19 @@ import { fetchSuggestions } from './api.js';
 
 /**
  * Global application state
- * @type {{ exclude: Set<string>, searchQuery: string }}
+ * @type {{ exclude: Set<string>, searchQuery: string, types: Array<string> }}
  */
 const state = {
     exclude: new Set(),
-    searchQuery: ""
+    searchQuery: "",
+    types: ["item", "material"],
 };
 
 /** @type {HTMLElement | null} */
 const resultsContainer = document.getElementById("item-results");
+
+/** @type {HTMLElement | null} */
+const typeSelect = document.getElementById("type-select");
 
 /** @type {HTMLInputElement | null} */
 const searchInput = (/** @type {HTMLInputElement} */ (document.getElementById("item-search")));
@@ -41,7 +45,7 @@ async function updateUI() {
     }
 
     /** @type {Suggestion[]} */
-    const data = await fetchSuggestions(state.searchQuery, state.exclude);
+    const data = await fetchSuggestions(state.searchQuery, state.exclude, state.types);
     resultsContainer.innerHTML = data.map(itemCard).join("");
 }
 
@@ -55,9 +59,35 @@ const handleSearch = debounce((/** @type {Event} */ event) => {
     updateUI();
 }, 300);
 
+
+/**
+ * Handles type selection changes.
+ * @type {(event: Event) => void}
+ */
+const handleSelectType = (/** @type {Event} */ event) => {
+    const value = /** @type {HTMLInputElement} */ (event.target).value;
+    switch (value) {
+        case "both":
+            state.types = ["item", "material"]
+            break;
+        case "items":
+            state.types = ["item"]
+            break;
+        case "materials":
+            state.types = ["material"]
+            break;
+    }
+    updateUI();
+};
+
+
 // Initialize Event Listeners
 if (searchInput) {
     searchInput.addEventListener("input", handleSearch);
+}
+
+if (typeSelect) {
+    typeSelect.addEventListener("change", handleSelectType);
 }
 
 document.querySelectorAll(".exclude-check").forEach((el) => {
@@ -77,3 +107,4 @@ document.querySelectorAll(".exclude-check").forEach((el) => {
         updateUI();
     });
 });
+

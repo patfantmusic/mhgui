@@ -15,4 +15,10 @@ def index():
 def suggestions(query: str):
     client = DBClient()
     exclude = request.args.get("exclude").split(",")
-    return client.search_items(query, exclude=exclude)
+    types = request.args.get("types").split(",")
+    results = []
+    if "item" in types:
+        results += client.search_items(query, exclude=exclude)
+    if "material" in types:
+        results += client.search_materials(query)
+    return results

@@ -1,0 +1,22 @@
+/* Ensure the body and wrapper take up the full screen height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Full viewport height */
+    padding: 1rem;
+}
+
+/* This allows the results to grow and scroll */
+#item-results {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    /* Important for flex-scroll behavior */
+}
