@@ -44,9 +44,11 @@ def vite_assets() -> Dict[str, Any]:
             with open(manifest_path, "r") as f:
                 manifest: Dict[str, Any] = json.load(f)
             hashed_file: str = manifest[f"src/{entry}"]["file"]
+            print('<script type="module" src="/static/dist/{hashed_file}"></script>')
             return f'<script type="module" src="/static/dist/{hashed_file}"></script>'
-        except (FileNotFoundError, KeyError, TypeError):
-            return ""
+        except (FileNotFoundError, KeyError, TypeError) as e:
+            print(f"Vite manifest error: {e}")  # Check Heroku logs for this
+            return f""
 
     return dict(vite_tag=vite_tag, is_dev=IS_DEV)
 
