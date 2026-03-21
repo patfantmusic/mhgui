@@ -1,6 +1,7 @@
 */__pycache__
-mhgui/scrape/cache/*.html
-mhgui/static/dist/.vite
-mhgui/static/dist/assets
+scrape/cache/*.html
+scrape/cache/map/*.html
+static/dist/.vite
+static/dist/assets
 node_modules
 package-lock.json

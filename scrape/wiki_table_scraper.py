@@ -8,8 +8,8 @@ from wiki_utils import clean_cell
 
 class MHWikiTableScraper:
     base_url = "https://monsterhunter.fandom.com/wiki"
-    cache_dir = "mhgui/scrape/cache"
-    data_dir = "mhgui/scrape/data"
+    cache_dir = "scrape/cache"
+    data_dir = "static/data"
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -96,11 +96,9 @@ class MHWikiTableScraper:
         result = pd.concat(cleaned_tables, ignore_index=True)
         result.to_csv(f"{self.data_dir}/items.csv", index=False)
 
-    def scrape_materials(self, g_rank=True) -> None:
-        endpoint = (
-            "MHGU:_Monster_Material_List" if g_rank else "MHGen:_Monster_Material_List"
-        )
-        output_file = "materials_gu.csv" if g_rank else "materials_gen.csv"
+    def scrape_gu_materials(self) -> None:
+        endpoint = "MHGU:_Monster_Material_List"
+        output_file = "materials_gu.csv"
 
         soup = self.get_soup(endpoint)
         dfs = self.scrape_tables(endpoint)
@@ -149,9 +147,61 @@ class MHWikiTableScraper:
         result = pd.concat(cleaned_tables, ignore_index=True)
         result.to_csv(f"{self.data_dir}/{output_file}", index=False)
 
+    def scrape_gen_materials(self) -> None:
+        endpoint = "MHGen:_Monster_Material_List"
+        output_file = "materials_gen.csv"
+
+        soup = self.get_soup(endpoint)
+        dfs = self.scrape_tables(endpoint)
+
+        monster_names = []
+        for span in soup.find_all("span", {"class": "mw-headline"}):
+            text = span.get_text().strip()
+            if text != "Small Monsters":
+                monster_names.append(text)
+
+        cleaned_tables = []
+        for df, monster_name in zip(list(dfs)[1:], monster_names[1:]):
+            # Define the transformation as a single fluent chain
+            try:
+                df = (
+                    df.dropna(how="all")
+                    .drop(df.columns[5:10], axis=1)
+                    .drop(index=0)
+                    .rename(
+                        columns={
+                            0: "icon",
+                            1: "name",
+                            2: "rarity",
+                            3: "value",
+                            4: "description",
+                        }
+                    )
+                    .map(clean_cell)
+                    # Filter out decorative rows
+                    .loc[lambda x: x["icon"] != x["name"]]
+                    .assign(
+                        icon=lambda x: x["icon"].str.split(".png").str[0] + ".png",
+                        # Vectorized string cleaning
+                        value=lambda x: x["value"].str.replace("z", "", regex=False),
+                        # Add the monster name context
+                        monster_name=monster_name,
+                        # Strip non-ASCII (Japanese) text and whitespace
+                        name=lambda x: x["name"]
+                        .str.replace(r"[^\x00-\x7f]+", "", regex=True)
+                        .str.strip(),
+                    )
+                )
+            except Exception as e:
+                print(e)
+                continue
+            cleaned_tables.append(df)
+        result = pd.concat(cleaned_tables, ignore_index=True)
+        result.to_csv(f"{self.data_dir}/{output_file}", index=False)
+
 
 if __name__ == "__main__":
     scraper = MHWikiTableScraper()
     scraper.scrape_items()
-    scraper.scrape_materials()
-    scraper.scrape_materials(g_rank=False)
+    scraper.scrape_gu_materials()
+    scraper.scrape_gen_materials()

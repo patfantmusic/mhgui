@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 
 export default defineConfig({
     // The "root" is where index.html would usually live. 
@@ -7,12 +6,12 @@ export default defineConfig({
     root: './',
 
     build: {
-        outDir: 'mhgui/static/dist',
+        outDir: 'static/dist',
         emptyOutDir: true,
         manifest: true, // <--- IMPORTANT
         rollupOptions: {
             input: {
-                main: './src/main.js',
+                main: './src/main.ts',
             },
         },
     },
