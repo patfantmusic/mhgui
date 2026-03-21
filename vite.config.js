@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
     // The "root" is where index.html would usually live. 
     // We'll keep it as the project root.
     root: './',
+    base: mode === 'production' ? '/static/dist/' : '/',
+    assetsInclude: ['**/*.csv'],
 
     build: {
         outDir: 'static/dist',
@@ -28,4 +30,4 @@ export default defineConfig({
             'Cross-Origin-Embedder-Policy': 'require-corp',
         },
     }
-});
+}));
