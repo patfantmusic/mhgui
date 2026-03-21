@@ -1,1 +1,1 @@
-web: gunicorn mhgui.app
+web: gunicorn app
