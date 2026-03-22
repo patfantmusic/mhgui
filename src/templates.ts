@@ -87,47 +87,43 @@ function gatheringInfo(yields: YieldData[]): string {
             }).join("");
 
             return `
-                <div class="badge border border-secondary-subtle bg-body-tertiary text-body fw-normal me-1 mb-1 p-1 d-inline-flex align-items-center" style="font-size: 0.75rem;">
+                <div class="badge border border-secondary-subtle bg-body-tertiary text-body fw-normal me-1 mb-1 p-1 d-inline-flex align-items-center" style="font-size: 0.65rem;">
                     <span class="fw-bold border-end border-secondary-subtle pe-1 me-1">${areaNum}</span>
                     <span class="font-monospace" style="letter-spacing: 1px;">${coloredRanks}</span>
                 </div>`;
         }).join("");
 
         return `
-            <div class="mb-2">
+            <div class="mb-2 d-flex flex-row align-items-center">
                 <div class="text-uppercase fw-bold text-body-secondary" style="font-size: 0.65rem; letter-spacing: 0.05rem;">${mapName}</div>
-                <div class="d-flex flex-wrap">${areaPills}</div>
+                <div class="d-flex flex-wrap mx-2">${areaPills}</div>
             </div>`;
     }).join("");
 
-    return `<div class="gathering-container p-1">${mapHtml}</div>`;
+    return `<div class="gathering-container px-1">${mapHtml}</div>`;
 }
 
 
 export function acquireSection(item: Item | CraftableItem): string {
-    if (isCraftable(item)) {
-        return `
-            <div class="card-body">
-                <h6 class="text-uppercase small text-warning fw-bold">Ingredients</h6>
-                <p class="small mb-0">${item.first_ingredient} + ${item.second_ingredient}</p>
-            </div>
-        `;
-    } else if (isGatherable(item)) {
+    if (isGatherable(item)) {
         const gathering_yields = Array.from(item.yields_struct);
         return `
-            <div class="card-body">
-                <h6 class="text-uppercase small text-warning fw-bold">Gathering Locations</h6>
-                <p class="small mb-0">${gatheringInfo(gathering_yields)}</p>
+            <div class="col-md-4 border-start border-secondary">
+                <div class="card-body">
+                    <h6 class="text-uppercase small text-warning fw-bold">Gathering Locations</h6>
+                    <p class="small mb-0">${gatheringInfo(gathering_yields)}</p>
+                </div>
             </div>
-        `
-    } else {
-        return `
+        `;
+    }
+    return `
+        <div class="col-md-4 border-start border-secondary">
             <div class="card-body">
                 <h6 class="text-uppercase small text-warning fw-bold">How to Acquire</h6>
                 <p class="small mb-0">${item.how_to_get}</p>
             </div>
-        `;
-    }
+        </div>
+    `;
 }
 
 
@@ -159,15 +155,19 @@ export function itemCard(item: Item): string {
                         ${item.rarity}
                     </span>
                 </div>
-                <div>
+                <div class="mb-1">
                     <h6 class="d-inline small text-warning">Capacity: </h6>
                     <span>${item.capacity}</span>
                 </div>
+                ${isCraftable(item) ? `
+                    <div>
+                        <h6 class="d-inline small text-warning">Ingredients: </h6>
+                        <span>${item.first_ingredient} + ${item.second_ingredient}</span>
+                    </div>
+                ` : ''}
             </div>
         </div>
-        <div class="col-md-4 border-start border-secondary">
-            ${acquireSection(item)}
-        </div>
+        ${acquireSection(item)}
     </div>
 `;
 }
