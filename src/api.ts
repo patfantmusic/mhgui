@@ -1,5 +1,5 @@
 import { queryDB } from './dbutils';
-import { itemCard, materialCard, Item, Material } from './templates';
+import { itemCard, materialCard, skillCard, Item, Material } from './templates';
 
 async function fetchItems(query: string, excludeSet: Set<string>): Promise<string[]> {
     const excludeArray = Array.from(excludeSet);
@@ -70,4 +70,21 @@ export async function fetchSuggestions(
     }
 
     return results;
+}
+
+
+export async function fetchSkills(query: string): Promise<string[]> {
+    try {
+        const sql = `
+            SELECT *
+            FROM skills
+            WHERE regexp_replace(lower(ability), '[^a-z0-9]', '', 'g')
+            LIKE '%' || regexp_replace(lower(?), '[^a-z0-9]', '', 'g') || '%'
+        `;
+        const results = await queryDB(sql, [query]);
+        return results.map(skillCard);
+    } catch (error) {
+        console.error("Fetch error:", error);
+        return [];
+    }
 }

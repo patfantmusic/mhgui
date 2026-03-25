@@ -210,3 +210,25 @@ export function materialCard(material: Material): string {
     </div>
 `;
 }
+
+
+
+export function skillCard(skill: any): string {
+    return `
+    <div class="card custom-card-dark d-flex flex-row align-items-center mt-3">
+        <div class="col-md-4">
+            <div class="card-body">
+                <h5 class="card-title text-warning mt-2">${skill.ability}</h5>
+                <p class="text-muted"><i>${skill.skill} | ${skill.points}</i></p>
+            </div>
+        </div>
+        <div class="col-md-4 border-start border-secondary">
+            <div class="card-body">
+                <h6 class="text-warning mt-2">Description</h5>
+                <p class="text-muted">${skill.description}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+`;
+}

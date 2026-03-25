@@ -67,7 +67,8 @@ h6,
 }
 
 /* The scrollable container */
-#item-results {
+#item-results,
+#skill-results {
     flex: 1;
     overflow-y: auto;
     min-height: 0;

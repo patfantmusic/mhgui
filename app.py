@@ -72,4 +72,19 @@ def items() -> str:
     Returns:
         The rendered HTML content of 'index.html'.
     """
-    return render_template("index.html")
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return render_template("items_content.html")
+    return render_template("items.html")
+
+
+@application.route("/skills")
+def skills() -> str:
+    """
+    Renders the skills page.
+
+    Returns:
+        The rendered HTML content of 'skills.html'.
+    """
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return render_template("skills_content.html")
+    return render_template("skills.html")

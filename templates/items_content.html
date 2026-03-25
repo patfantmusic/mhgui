@@ -1,0 +1,36 @@
+<form>
+    <div class="mb-3">
+        <input class="form-control" id="item-search" type="text" list="item-suggestions" />
+    </div>
+    <div class="mb-3">
+        <div class="btn-group" id="type-select" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="items-radio" value="items">
+            <label class="btn btn-outline-primary" for="items-radio">Items</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="materials-radio" value="materials">
+            <label class="btn btn-outline-primary" for="materials-radio">Materials</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="both-radio" value="both" checked>
+            <label class="btn btn-outline-primary" for="both-radio">All</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="form-check">
+            <input class="form-check-input exclude-check" type="checkbox" value="Supply Items" id="exclude-supply-check"
+                checked />
+            <label class="form-check-label" for="exclude-supply-check">
+                Exclude Supply Items
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exclude-check" type="checkbox" value="Event Rewards" id="exclude-event-check"
+                checked />
+            <label class="form-check-label" for="exclude-event-check">
+                Exclude Event Rewards
+            </label>
+        </div>
+    </div>
+</form>
+<div class="my-1 border-bottom border-secondary opacity-25"></div>
+<div id="item-results">
+</div>

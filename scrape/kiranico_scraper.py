@@ -1,15 +1,31 @@
+"""
+Scrapes data from Kiranico (MHGU) and saves it as CSV files.
+
+This module handles the retrieval and parsing of HTML tables regarding
+combinations, map gathering yields, and skills from the MHGU Kiranico website.
+"""
+
 from io import StringIO
 import re
-from typing import Generator
+from typing import Generator, List, Dict, Any
 import numpy as np
+import click
 import pandas as pd
 import httpx
+from loguru import logger
 from bs4 import BeautifulSoup
-from wiki_utils import clean_cell
 
 
-def parse_yield(yield_str: str):
-    # Regex captures the number after 'x' and optionally the number inside '( %)'
+def parse_yield(yield_str: str) -> List[Dict[str, int]]:
+    """
+    Parses a yield string (e.g., "x2(50%)") into structured data.
+
+    Args:
+        yield_str: The string containing quantity and probability info.
+
+    Returns:
+        A list of dictionaries with 'quantity' and 'chance' keys.
+    """
     pattern = r"x(\d+)(?:\s*\((\d+)%\))?"
     matches = re.findall(pattern, yield_str)
 
@@ -21,6 +37,13 @@ def parse_yield(yield_str: str):
 
 
 class KiranicoTableScraper:
+    """
+    Scraper for the MHGU Kiranico website.
+
+    Attributes:
+        base_url: The base URL for the Kiranico MHGU wiki.
+    """
+
     base_url = "https://mhgu.kiranico.com"
     cache_dir = "scrape/cache"
     data_dir = "static/data"
@@ -67,13 +90,18 @@ class KiranicoTableScraper:
         "586e5": "Forlorn Citadel",
     }
 
+    # Compiled Regex Patterns
+    RE_GATHER_CHANCE = r"(?:(?P<appear_chance>\d+)%\s+)?x(?P<min>\d+)〜(?P<max>\d+)"
+    RE_GATHER_ITEM = r"(?P<name_clean>.*?)(?:\s+x(?P<amount>\d+))?$"
+
     def __init__(self):
         self.client = httpx.Client(
             base_url=self.base_url,
             headers=self.headers,
         )
 
-    def get_html(self, endpoint, from_cache=True):
+    def get_html(self, endpoint: str, from_cache: bool = True) -> str:
+        """Retrieves HTML content, either from local cache or via HTTP request."""
         if from_cache:
             try:
                 with open(f"{self.cache_dir}/{endpoint}.html", "r") as input_file:
@@ -81,7 +109,7 @@ class KiranicoTableScraper:
             except FileNotFoundError:
                 pass
 
-        print(f"Getting response for {self.base_url}/{endpoint}...")
+        logger.info(f"Getting response for {self.base_url}/{endpoint}...")
         response = self.client.get(f"./{endpoint}")
         response.raise_for_status()
 
@@ -90,71 +118,74 @@ class KiranicoTableScraper:
 
         return response.text
 
-    def get_soup(self, endpoint):
+    def get_soup(self, endpoint: str) -> BeautifulSoup:
+        """Returns a BeautifulSoup object for the given endpoint."""
         return BeautifulSoup(self.get_html(endpoint), "lxml")
 
     def scrape_tables(
-        self, endpoint, table_selector=".article-table"
+        self, endpoint: str, table_selector: str = ".article-table"
     ) -> Generator[pd.DataFrame, None, None]:
-        """Generic method to find a table and return rows of text."""
+        """Generic method to parse HTML tables into pandas DataFrames."""
         html = self.get_html(endpoint)
         for df in pd.read_html(StringIO(html), encoding="utf-8"):
             yield df
 
     def scrape_combinations(self) -> None:
+        """Scrapes item combination recipes and saves to CSV."""
         soup = self.get_soup("combine")
-        dfs = self.scrape_tables("combine")
+        tables = list(self.scrape_tables("combine"))
 
-        df = list(dfs)[-1]
-        df = (
-            df.drop(df.columns[1], axis=1)
-            .drop(df.columns[3], axis=1)
-            .rename(
-                columns={
-                    0: "result",
-                    2: "first_ingredient",
-                    4: "second_ingredient",
-                    5: "success_chance",
-                    6: "amount_crafted",
-                    7: "affected_by",
-                }
-            )
-            .assign(
-                success_chance=lambda x: x["success_chance"].str.replace(
-                    "%", "", regex=False
-                ),
-                amount_crafted=lambda x: x["amount_crafted"].map(parse_yield),
-            )
-            # .melt(
-            #    id_vars=["result", "success_chance", "amount_crafted", "affected_by"],
-            #    value_vars=["first_ingredient", "second_ingredient"],
-            #    value_name="ingredient",
-            # )
-            # .drop("variable", axis=1)
+        if not tables:
+            logger.warning("No combination tables found.")
+            return
+
+        df = tables[-1]
+
+        # Define mapping for only the columns you want to keep
+        # Original structure assumes columns by index
+        column_mapping = {
+            0: "result",
+            2: "first_ingredient",
+            4: "second_ingredient",
+            5: "success_chance",
+            6: "amount_crafted",
+            7: "affected_by",
+        }
+
+        # Select relevant columns and rename them
+        df = df[list(column_mapping.keys())].rename(columns=column_mapping)
+
+        # Clean and transform data
+        df = df.assign(
+            success_chance=lambda x: x["success_chance"].str.replace(
+                "%", "", regex=False
+            ),
+            amount_crafted=lambda x: x["amount_crafted"].map(parse_yield),
         )
-        print(df["amount_crafted"])
-        print(f"{self.data_dir}/combinations.csv")
+
         df.to_csv(f"{self.data_dir}/combinations.csv", index=False)
+        logger.success(f"Saved combinations to {self.data_dir}/combinations.csv")
 
     def scrape_maps(self) -> None:
+        """Scrapes gathering spots and yields for all registered maps."""
         cleaned_tables = []
-        for map_id, map_name in self.maps.items():
-            print(f"Scraping {map_name}...")
-            soup = self.get_soup(f"map/{map_id}")
-            dfs = list(self.scrape_tables(f"map/{map_id}"))[10:]
 
-            h4_headers = soup.find_all("h4")
-            h5_headers = ["low", "high", "g"]
-            header_data = [
-                (h4.text.replace("Area", ""), h5)
-                for h4 in h4_headers
-                for h5 in h5_headers
-            ]
+        for map_id, map_name in self.maps.items():
+            endpoint = f"map/{map_id}"
+            soup = self.get_soup(endpoint)
+            # Skip the first 10 tables which are usually metadata/monsters
+            dfs = list(self.scrape_tables(endpoint))[10:]
+
+            # Generator for header pairs
+            # This assumes strict structure: H4 (Area) followed by tables for Low, High, G rank
+            header_data = (
+                (h4.text.replace("Area", "").strip(), rank)
+                for h4 in soup.find_all("h4")
+                for rank in ["low", "high", "g"]
+            )
 
             for df, (area, rank) in zip(dfs, header_data):
-                pattern = r"(?:(?P<appear_chance>\d+)%\s+)?x(?P<min>\d+)〜(?P<max>\d+)"
-                amount_pattern = r"(?P<name_clean>.*?)(?:\s+x(?P<amount>\d+))?$"
-
+                # Basic cleanup and context assignment
                 df = (
                     df.rename(columns={0: "attempts", 1: "name", 2: "chance"})
                     .assign(
@@ -165,25 +196,84 @@ class KiranicoTableScraper:
                         chance=lambda x: x["chance"].str.replace("%", "", regex=False),
                     )
                     .dropna(subset=["name"])
-                    # First extraction for attempts/min/max
-                    .join(df[0].str.extract(pattern))
-                    # Second extraction for name and yield
-                    .join(df[1].str.extract(amount_pattern))
                     .assign(
+                        # Extract yield/attempts info (e.g., "x2~4")
+                        **df[0].str.extract(self.RE_GATHER_CHANCE).to_dict("series"),
+                        # Extract item name and fixed amount (e.g., "Herb x2")
+                        **df[1].str.extract(self.RE_GATHER_ITEM).to_dict("series"),
+                    )
+                    .assign(
+                        # Normalize item yield logic
                         item=lambda x: np.where(x["min"].isna(), x["attempts"], np.nan),
-                        # Fill missing yields with 1 and convert to integer
                         amount=lambda x: x["amount"].fillna(1).astype(int),
                     )
-                    # Drop the original 'name' column if you prefer the 'name_clean' version
                     .drop(columns=["name", "attempts"])
                     .rename(columns={"name_clean": "name"})
                 )
                 cleaned_tables.append(df)
-        result = pd.concat(cleaned_tables, ignore_index=True)
-        result.to_csv(f"{self.data_dir}/gathering_yields.csv", index=False)
+
+        if not cleaned_tables:
+            logger.warning("No map data scraped.")
+            return
+
+        pd.concat(cleaned_tables, ignore_index=True).to_csv(
+            f"{self.data_dir}/gathering_yields.csv", index=False
+        )
+        logger.success(
+            f"Saved gathering yields to {self.data_dir}/gathering_yields.csv"
+        )
+
+    def scrape_skills(self) -> None:
+        """Scrapes list of armor skills."""
+        soup = self.get_soup("skill")
+        tables = list(self.scrape_tables("skill"))
+
+        if not tables:
+            logger.warning("No skill tables found.")
+            return
+
+        df = tables[-1]
+
+        # Map column indices to names
+        column_mapping = {0: "skill", 1: "ability", 2: "points", 3: "description"}
+
+        df = df.rename(columns=column_mapping).dropna(subset=["ability"])
+
+        # Strip '+' from points
+        df["points"] = df["points"].str.replace("+", "", regex=False)
+
+        # Replace exact '-' with empty strings for cleaner CSVs
+        columns_to_clean = ["ability", "points", "description"]
+        for col in columns_to_clean:
+            df[col] = df[col].replace(r"^-$", "", regex=True)
+
+        df.to_csv(f"{self.data_dir}/skills.csv", index=False)
+        logger.success(f"Saved skills to {self.data_dir}/skills.csv")
+
+
+@click.group()
+def cli():
+    """CLI for Kiranico Scraper."""
+    pass
+
+
+@cli.command()
+def combinations():
+    """Scrape item combinations."""
+    KiranicoTableScraper().scrape_combinations()
+
+
+@cli.command()
+def maps():
+    """Scrape map gathering data."""
+    KiranicoTableScraper().scrape_maps()
+
+
+@cli.command()
+def skills():
+    """Scrape armor skills."""
+    KiranicoTableScraper().scrape_skills()
 
 
 if __name__ == "__main__":
-    scraper = KiranicoTableScraper()
-    # scraper.scrape_combinations()
-    scraper.scrape_maps()
+    cli()

@@ -40,6 +40,7 @@ export async function loadAppData(): Promise<void> {
         { name: 'materials_gu', path: '/static/data/materials_gu.csv' },
         { name: 'combinations', path: '/static/data/combinations.csv' },
         { name: 'yields', path: '/static/data/gathering_yields.csv' },
+        { name: 'skills', path: '/static/data/skills.csv' }
     ];
 
     for (const data of datasets) {
