@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig(({ mode }) => ({
     // The "root" is where index.html would usually live. 
@@ -6,6 +7,7 @@ export default defineConfig(({ mode }) => ({
     root: './',
     base: mode === 'production' ? '/static/dist/' : '/',
     assetsInclude: ['**/*.csv'],
+    plugins: [svelte()],
 
     build: {
         outDir: 'static/dist',

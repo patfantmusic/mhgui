@@ -93,6 +93,7 @@ class KiranicoTableScraper:
     # Compiled Regex Patterns
     RE_GATHER_CHANCE = r"(?:(?P<appear_chance>\d+)%\s+)?x(?P<min>\d+)〜(?P<max>\d+)"
     RE_GATHER_ITEM = r"(?P<name_clean>.*?)(?:\s+x(?P<amount>\d+))?$"
+    RE_ARMOR_DEFENSE = r"(?P<min_defense>\d+)\s*～\s*(?P<max_defense>\d+)"
 
     def __init__(self):
         self.client = httpx.Client(
@@ -250,6 +251,95 @@ class KiranicoTableScraper:
         df.to_csv(f"{self.data_dir}/skills.csv", index=False)
         logger.success(f"Saved skills to {self.data_dir}/skills.csv")
 
+    def scrape_armor(self) -> None:
+        """Scrapes armor set data."""
+        cleaned_tables = []
+        relation = []
+        global_id_offset = 0
+        for rarity in range(1, 12):
+            endpoint = f"armor?rare={rarity}"
+            soup = self.get_soup(endpoint)
+            hunter_types = ("blademaster", "gunner")
+            for hunter_type, df in zip(
+                hunter_types, list(self.scrape_tables(endpoint))[-2:]
+            ):
+                df = (
+                    df.rename(columns={"Unnamed: 2": "name"})
+                    .assign(
+                        armor_set_id=lambda x: x["name"].isna().cumsum() // 2
+                        + global_id_offset,
+                    )
+                    .dropna(subset=["name"])
+                    .assign(
+                        **df["Defense"]
+                        .str.extract(self.RE_ARMOR_DEFENSE)
+                        .to_dict("series"),
+                        fire=lambda x: x["Fir"]
+                        .str.replace("+", "", regex=False)
+                        .replace("-", "0"),
+                        ice=lambda x: x["Ice"]
+                        .str.replace("+", "", regex=False)
+                        .replace("-", "0"),
+                        thunder=lambda x: x["Thn"]
+                        .str.replace("+", "", regex=False)
+                        .replace("-", "0"),
+                        water=lambda x: x["Wat"]
+                        .str.replace("+", "", regex=False)
+                        .replace("-", "0"),
+                        dragon=lambda x: x["Dra"]
+                        .str.replace("+", "", regex=False)
+                        .replace("-", "0"),
+                    )
+                    .drop(columns=["Defense", "Fir", "Ice", "Thn", "Wat", "Dra"])
+                )
+                df["rarity"] = rarity
+                df["hunter_type"] = hunter_type
+                conditions = [
+                    (df["Male"] == "○") & (df["Female"] == "○"),
+                    (df["Male"] == "○"),
+                    (df["Female"] == "○"),
+                ]
+
+                # Define the corresponding values
+                choices = ["both", "male", "female"]
+
+                # Create the new column
+                df["wearable_by"] = np.select(conditions, choices, default="none")
+                df["num_slots"] = df["Slots"].str.count("◯")
+
+                flattened = df["Skill"].str.extractall(
+                    r"(?P<skill_tree>[^:]+?):(?P<points>[\+\-]\d+)"
+                )
+                result = (
+                    flattened.reset_index(level=0)
+                    .merge(
+                        df[["name", "armor_set_id"]],
+                        left_on="level_0",
+                        right_index=True,
+                    )
+                    .drop(columns="level_0")
+                )
+                result = (
+                    result[["skill_tree", "name", "armor_set_id", "points"]]
+                    .rename(columns={"name": "armor"})
+                    .assign(
+                        points=lambda x: x["points"].str.replace("+", "", regex=False),
+                        skill_tree=lambda x: x["skill_tree"].str.strip(),
+                    )
+                )
+                df = df.drop(columns=["Male", "Female", "Skill", "Slots"])
+
+                if not df.empty:
+                    global_id_offset = df["armor_set_id"].iloc[-1]
+
+                cleaned_tables.append(df)
+                relation.append(result)
+
+        df = pd.concat(cleaned_tables, ignore_index=True)
+        relation_df = pd.concat(relation, ignore_index=True)
+        relation_df.to_csv(f"{self.data_dir}/armor_skills.csv", index=False)
+        df.to_csv(f"{self.data_dir}/armor.csv", index=False)
+
 
 @click.group()
 def cli():
@@ -273,6 +363,12 @@ def maps():
 def skills():
     """Scrape armor skills."""
     KiranicoTableScraper().scrape_skills()
+
+
+@cli.command()
+def armor():
+    """Scrape armor sets."""
+    KiranicoTableScraper().scrape_armor()
 
 
 if __name__ == "__main__":

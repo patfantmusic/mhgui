@@ -14,14 +14,15 @@ h3 {
     font-family: 'Metamorphous', serif !important;
 }
 
-/* Prevent the whole page from scrolling */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+#app,
+main,
+.main-wrapper {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    /* Or 100% if the parent is fixed */
+    overflow: hidden;
+    /* Prevent the wrapper itself from scrolling */
 }
 
 /* Apply the title font specifically to headings */

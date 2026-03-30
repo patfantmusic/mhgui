@@ -1,86 +1,213 @@
+import { get, readable } from 'svelte/store';
 import * as duckdb from '@duckdb/duckdb-wasm';
+import type { AsyncDuckDBConnection } from '@duckdb/duckdb-wasm';
+import { type GameItem, type Skill, type ArmorSkill } from './types';
 
-let db: duckdb.AsyncDuckDB | null = null;
-let conn: duckdb.AsyncDuckDBConnection | null = null;
+const DATASETS = [
+    { name: 'items', path: '/static/data/items.csv' },
+    { name: 'materials_gen', path: '/static/data/materials_gen.csv' },
+    { name: 'materials_gu', path: '/static/data/materials_gu.csv' },
+    { name: 'combinations', path: '/static/data/combinations.csv' },
+    { name: 'yields', path: '/static/data/gathering_yields.csv' },
+    { name: 'skills', path: '/static/data/skills.csv' },
+    { name: 'armor_skills', path: '/static/data/armor_skills.csv' },
+];
 
-/**
- * Initializes DuckDB-WASM with the required worker and wasm bundles.
- */
-export async function initDB(): Promise<duckdb.AsyncDuckDBConnection> {
+async function initDB() {
     const JSDELIVR_BUNDLES = duckdb.getJsDelivrBundles();
-
-    // Select a bundle based on browser capability
     const bundle = await duckdb.selectBundle(JSDELIVR_BUNDLES);
 
-    const workerResponse = await fetch(bundle.mainWorker!);
-    const workerBlob = new Blob([await workerResponse.text()], { type: 'application/javascript' });
+    // FIX: Fetch the worker script and create a local Blob URL
+    const workerRes = await fetch(bundle.mainWorker!);
+    const workerBlob = await workerRes.blob();
     const workerUrl = URL.createObjectURL(workerBlob);
 
     const worker = new Worker(workerUrl);
-    const logger = new duckdb.ConsoleLogger();
+    const db = new duckdb.AsyncDuckDB(new duckdb.ConsoleLogger(), worker);
 
-    db = new duckdb.AsyncDuckDB(logger, worker);
+    // Remember to revoke the URL later if needed, though usually not necessary for a singleton
     await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
 
-    conn = await db.connect();
-    console.log("DuckDB-Wasm Initialized");
-    return conn;
-}
+    const conn = await db.connect();
 
-/**
- * Loads the items and materials CSV files into the database.
- */
-export async function loadAppData(): Promise<void> {
-    if (!conn) await initDB();
-    if (!db || !conn) return;
-
-    const datasets = [
-        { name: 'items', path: '/static/data/items.csv' },
-        { name: 'materials_gen', path: '/static/data/materials_gen.csv' },
-        { name: 'materials_gu', path: '/static/data/materials_gu.csv' },
-        { name: 'combinations', path: '/static/data/combinations.csv' },
-        { name: 'yields', path: '/static/data/gathering_yields.csv' },
-        { name: 'skills', path: '/static/data/skills.csv' }
-    ];
-
-    for (const data of datasets) {
-        const response = await fetch(data.path);
+    for (const { name, path } of DATASETS) {
+        // 1. Fetch the file manually to ensure it's loaded
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`Failed to fetch ${path}`);
         const buffer = await response.arrayBuffer();
 
-        // Register the file in the virtual file system
-        await db.registerFileBuffer(`${data.name}.csv`, new Uint8Array(buffer));
+        // 2. Register as a Buffer (Immediate availability)
+        await db.registerFileBuffer(`${name}.csv`, new Uint8Array(buffer));
 
-        // Create table from the registered CSV
+        // 3. Create the table
         await conn.query(`
-            CREATE TABLE IF NOT EXISTS ${data.name} AS 
-            SELECT * FROM read_csv_auto('${data.name}.csv')
+            CREATE TABLE IF NOT EXISTS ${name} AS 
+            SELECT * FROM read_csv_auto('${name}.csv')
         `);
 
-        console.log(`Loaded table: ${data.name}`);
+        // 4. Optional: Drop the file from memory once the table is internal
+        await db.dropFile(`${name}.csv`);
     }
-
+    // Perform the UNION logic immediately after sources are ready
     await conn.query(`
         CREATE TABLE IF NOT EXISTS materials AS
-        SELECT * FROM materials_gen
-        UNION ALL
-        SELECT * FROM materials_gu
+        SELECT * FROM materials_gen UNION ALL SELECT * FROM materials_gu
     `);
 
-    console.log("Loaded materials table");
+    return { db, conn };
 }
 
-/**
- * Executes a parameterized query using '?' placeholders.
- */
-export async function queryDB<T = any>(sql: string, params: any[] = []): Promise<T[]> {
-    if (!conn) throw new Error("Database not initialized");
+let initPromise;
 
-    const statement = await conn.prepare(sql);
-    const result = await statement.query(...params);
+function getDB() {
+    if (!initPromise) {
+        initPromise = initDB();
+    }
+    return initPromise;
+}
 
-    // Convert to array and force-spread each row into a new object
-    const rows = result.toArray().map(row => ({ ...row })) as T[];
+export const dbStore = readable(null, (set) => {
+    getDB().then(set).catch(err => console.error("DuckDB Init Failed:", err));
+    // No-op stop function: we want to keep the DB alive even if subscribers hit 0
+    return () => { };
+});
 
-    await statement.close();
-    return rows;
+export async function query<T = any>(sql: string, params: any[] = []): Promise<T[]> {
+    const instance = await getDB();
+    const conn = await instance.db.connect();
+
+    try {
+        let result;
+        if (params.length > 0) {
+            // Use prepared statements for parameterized queries
+            const stmt = await conn.prepare(sql);
+            result = await stmt.query(...params);
+            await stmt.close(); // Clean up the statement
+        } else {
+            // Use direct query for simple SQL strings
+            result = await conn.query(sql);
+        }
+
+        return result.toArray().map((row) => row.toJSON()) as T[];
+    } finally {
+        await conn.close();
+    }
+}
+
+export async function getItems(searchText: string): Promise<GameItem[]> {
+    const tmpResults = await query(
+        `
+        WITH rank_aggregation AS (
+            SELECT 
+                name,
+                map,
+                area,
+                string_agg(DISTINCT left(rank, 1), '' ORDER BY left(rank, 1) DESC) AS rank_str
+            FROM yields
+            WHERE map IS NOT NULL
+            GROUP BY name, map, area
+        ),
+        map_aggregation AS (
+            SELECT 
+                name,
+                map,
+                json_group_object(area, rank_str) AS area_map
+            FROM rank_aggregation
+            GROUP BY name, map
+        ),
+        final_yields AS (
+            SELECT 
+                name,
+                json_group_object(map, area_map) AS yields_json
+            FROM map_aggregation
+            GROUP BY name
+        )
+        SELECT
+            items.*,
+            combinations.first_ingredient,
+            combinations.second_ingredient,
+            final_yields.yields_json
+        FROM items
+        LEFT JOIN combinations ON items.name = combinations.result
+        LEFT JOIN final_yields ON items.name = final_yields.name
+        WHERE regexp_replace(lower(items.name), '[^a-z0-9]', '', 'g') 
+            LIKE '%' || regexp_replace(lower(?), '[^a-z0-9]', '', 'g') || '%'
+        GROUP BY ALL;
+        `,
+        [`${searchText}`],
+    );
+    tmpResults.forEach((item) => {
+        if (item.yields_json !== null) {
+            item.yields_json = JSON.parse(item.yields_json);
+        }
+    });
+    const results = tmpResults as GameItem[];
+    return results;
+}
+
+export async function getMaterials(searchText: string): Promise<GameItem[]> {
+    const results = await query(
+        `
+        SELECT *
+        FROM materials
+        WHERE regexp_replace(lower(name), '[^a-z0-9]', '', '')
+        LIKE '%' || regexp_replace(lower(?), '[^a-z0-9]', '', 'g') || '%'
+        `,
+        [`${searchText}`],
+    );
+    return results as GameItem[];
+}
+
+
+export async function getSkills(searchText: string): Promise<Skill[]> {
+    const results = await query(
+        `
+        SELECT *
+        FROM skills
+        WHERE regexp_replace(lower(skill), '[^a-z0-9]', '', '')
+        LIKE '%' || regexp_replace(lower(?), '[^a-z0-9]', '', 'g') || '%'
+        `,
+        [`${searchText}`],
+    );
+    return results as Skill[];
+}
+
+export async function getArmorSkills(skills: string[]): Promise<ArmorSkill[]> {
+    const results = await query(
+        `
+        SELECT 
+            skill_tree, 
+            map_from_entries(
+                list_transform(
+                    list_distinct(list(armor_set_id)),
+                    id -> {
+                        'key': id, 
+                        'value': map_from_entries(
+                            list_transform(
+                                list_filter(
+                                    list({'set_id': armor_set_id, 'armor': armor, 'points': total_points}),
+                                    x -> x.set_id = id
+                                ),
+                                y -> {'key': y.armor, 'value': y.points}
+                            )
+                        )
+                    }
+                )
+            ) AS armor_distribution
+        FROM (
+            SELECT 
+                skill_tree, 
+                armor,
+                armor_set_id,
+                CAST(SUM(points) AS INTEGER) AS total_points
+            FROM armor_skills
+            WHERE list_contains(?, skill_tree)
+            GROUP BY skill_tree, armor, armor_set_id
+            HAVING total_points > 0
+        ) sub
+        GROUP BY skill_tree
+        `,
+        [JSON.stringify(skills)] // Pass the raw array
+    );
+    return results as ArmorSkill[];
 }

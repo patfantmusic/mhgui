@@ -61,7 +61,7 @@ def index() -> Response:
     Returns:
         A redirect response to the '/items' endpoint.
     """
-    return redirect("/items")
+    return render_template("base.html")
 
 
 @application.route("/items")
