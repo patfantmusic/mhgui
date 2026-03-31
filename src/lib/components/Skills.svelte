@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { type Skill } from "../../types";
-    import { db } from "../../db/dbStore";
+    import { type Skill } from "$lib/types";
+    import { db } from "$lib/db/dbStore";
 
     import SkillCard from "./SkillCard.svelte";
 

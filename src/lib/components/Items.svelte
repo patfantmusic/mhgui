@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { db } from "../../db/dbStore";
-    import { type GameItem } from "../../types";
+    import { db } from "$lib/db/dbStore";
+    import { type GameItem } from "$lib/types";
 
     import ItemCard from "./ItemCard.svelte";
 

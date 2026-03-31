@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-src/mhgui.egg-info/PKG-INFO
-src/mhgui.egg-info/SOURCES.txt
-src/mhgui.egg-info/dependency_links.txt
-src/mhgui.egg-info/requires.txt
-src/mhgui.egg-info/top_level.txt

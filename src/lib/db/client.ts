@@ -1,5 +1,5 @@
 import * as duckdb from '@duckdb/duckdb-wasm';
-import type { ArmorSkill, Skill, GameItem } from "../types"
+import type { ArmorSkill, Skill, GameItem } from "$lib/types"
 
 export class DbClient {
     private conn?: duckdb.AsyncDuckDBConnection;
@@ -22,7 +22,7 @@ export class DbClient {
         // The 'false' flag ensures we use Range Requests instead of downloading the whole DB
         await db.registerFileURL(
             'mhgu.duckdb',
-            import.meta.env.VITE_DB_URL,
+            "http://localhost:5173/mhgu.duckdb",
             duckdb.DuckDBDataProtocol.HTTP,
             false
         );
@@ -76,6 +76,7 @@ export class DbClient {
     }
 
     async query<T = any>(sql: string, params: any[] = []): Promise<T[]> {
+        if (!this.conn) throw new Error("Database not initialized");
         let result;
         if (params.length > 0) {
             // Use prepared statements for parameterized queries

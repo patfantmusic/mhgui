@@ -2,7 +2,7 @@ import { writable, get } from 'svelte/store';
 import { DbClient } from './client';
 
 function createDbStore() {
-    const { subscribe, set } = writable(null);
+    const { subscribe, set } = writable<DbClient | null>(null);
 
     return {
         subscribe,

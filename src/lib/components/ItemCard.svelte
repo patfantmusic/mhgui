@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { type GameItem, isCraftable, isGatherable } from "../../types";
+    import { type GameItem, isCraftable, isGatherable } from "$lib/types";
 
     let { item: item }: { item: GameItem } = $props();
 
