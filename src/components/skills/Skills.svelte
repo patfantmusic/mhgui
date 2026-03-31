@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { getArmorSkills, getSkills } from "../../dbutils";
     import { type Skill } from "../../types";
+    import { db } from "../../db/dbStore";
 
     import SkillCard from "./SkillCard.svelte";
 
@@ -10,9 +10,13 @@
     let searchText: string = $state("");
 
     async function populateResults(): Promise<void> {
-        const skills = await getSkills(searchText);
+        if (!$db) {
+            console.warn("Database is still initializing...");
+            return;
+        }
+        const skills = await $db.getSkills(searchText);
         const skillTrees = skills.map((skill) => skill.skill);
-        const armorSkills = await getArmorSkills(skillTrees);
+        const armorSkills = await $db.getArmorSkills(skillTrees);
         const tmpArmorSkillMap = {};
         armorSkills.forEach((entry) => {
             if (!tmpArmorSkillMap[entry.skill_tree]) {

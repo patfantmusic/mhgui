@@ -1,6 +1,12 @@
 <script lang="ts">
     import Items from "./components/items/Items.svelte";
     import Skills from "./components/skills/Skills.svelte";
+    import { onMount } from "svelte";
+    import { db } from "./db/dbStore";
+
+    onMount(() => {
+        db.init();
+    });
 
     let currentView = $state("items");
 </script>

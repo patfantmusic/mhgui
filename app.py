@@ -6,6 +6,7 @@ from flask import Flask, redirect, render_template, request, Response
 
 application: Flask = Flask(__name__)
 
+
 # Set this based on your environment variable
 IS_DEV: bool = os.environ.get("FLASK_ENV") == "development"
 

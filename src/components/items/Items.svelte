@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getItems, getMaterials } from "../../dbutils";
+    import { db } from "../../db/dbStore";
     import { type GameItem } from "../../types";
 
     import ItemCard from "./ItemCard.svelte";
@@ -13,8 +13,8 @@
     async function populateResults(): Promise<void> {
         // 1. Fetch data concurrently to avoid sequential blocking
         const [items, materials] = await Promise.all([
-            getItems(searchText),
-            getMaterials(searchText),
+            $db.getItems(searchText),
+            $db.getMaterials(searchText),
         ]);
 
         // 2. Build the array functionally using filtering and spreading
