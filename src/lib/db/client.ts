@@ -22,7 +22,7 @@ export class DbClient {
         // The 'false' flag ensures we use Range Requests instead of downloading the whole DB
         await db.registerFileURL(
             'mhgu.duckdb',
-            "http://localhost:5173/mhgu.duckdb",
+            import.meta.env.VITE_DB_URL,
             duckdb.DuckDBDataProtocol.HTTP,
             false
         );
