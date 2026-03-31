@@ -17,7 +17,7 @@
         const skills = await $db.getSkills(searchText);
         const skillTrees = skills.map((skill) => skill.skill);
         const armorSkills = await $db.getArmorSkills(skillTrees);
-        const tmpArmorSkillMap = {};
+        const tmpArmorSkillMap: Record<string, Record<string, number>> = {};
         armorSkills.forEach((entry) => {
             if (!tmpArmorSkillMap[entry.skill_tree]) {
                 tmpArmorSkillMap[entry.skill_tree] = {};

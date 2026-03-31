@@ -12,6 +12,11 @@
 
     async function populateResults(): Promise<void> {
         // 1. Fetch data concurrently to avoid sequential blocking
+        if (!$db) {
+            console.warn("Database is still initializing...");
+            return;
+        }
+
         const [items, materials] = await Promise.all([
             $db.getItems(searchText),
             $db.getMaterials(searchText),

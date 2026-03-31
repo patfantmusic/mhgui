@@ -3,6 +3,7 @@
     import Skills from "$lib/components/Skills.svelte";
     import { onMount } from "svelte";
     import { db } from "$lib/db/dbStore";
+    import { resolve } from "$app/paths";
 
     onMount(() => {
         db.init();
@@ -14,7 +15,12 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img src="/logo.png" height="40" width="160" alt="Logo" />
+            <img
+                src={resolve("/") + "/logo.png"}
+                height="40"
+                width="160"
+                alt="Logo"
+            />
         </a>
         <button
             class="navbar-toggler"
